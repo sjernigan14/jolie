@@ -18,26 +18,25 @@ document.addEventListener('DOMContentLoaded', function () {
  * Hamburger menu with smooth animation, outside click detection, and body scroll lock
  */
 function initMobileNav() {
-  const hamburger = document.querySelector('.hamburger');
-  const navMenu = document.querySelector('nav ul');
-  const navLinks = document.querySelectorAll('nav a');
+  const toggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navLinks');
 
-  if (!hamburger || !navMenu) return;
+  if (!toggle || !navMenu) return;
 
   // Toggle menu open/close
-  hamburger.addEventListener('click', function (e) {
+  toggle.addEventListener('click', function (e) {
     e.stopPropagation();
     toggleMobileMenu();
   });
 
   // Close menu when a nav link is clicked
-  navLinks.forEach(link => {
+  navMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', closeMobileMenu);
   });
 
   // Close menu when clicking outside
   document.addEventListener('click', function (e) {
-    if (!e.target.closest('nav') && !e.target.closest('.hamburger')) {
+    if (!e.target.closest('nav') && !e.target.closest('#navToggle')) {
       closeMobileMenu();
     }
   });
@@ -51,13 +50,14 @@ function initMobileNav() {
 }
 
 function toggleMobileMenu() {
-  const hamburger = document.querySelector('.hamburger');
-  const navMenu = document.querySelector('nav ul');
+  const toggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navLinks');
 
-  hamburger.classList.toggle('active');
+  if (!toggle || !navMenu) return;
+  toggle.classList.toggle('active');
   navMenu.classList.toggle('active');
 
-  if (hamburger.classList.contains('active')) {
+  if (toggle.classList.contains('active')) {
     document.body.style.overflow = 'hidden';
   } else {
     document.body.style.overflow = '';
@@ -65,10 +65,11 @@ function toggleMobileMenu() {
 }
 
 function closeMobileMenu() {
-  const hamburger = document.querySelector('.hamburger');
-  const navMenu = document.querySelector('nav ul');
+  const toggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navLinks');
 
-  hamburger.classList.remove('active');
+  if (!toggle || !navMenu) return;
+  toggle.classList.remove('active');
   navMenu.classList.remove('active');
   document.body.style.overflow = '';
 }
