@@ -24,25 +24,30 @@
     a { color: #8b6f47; text-decoration: none; transition: color 0.3s; }
     a:hover { color: #6b5838; }
 
-    nav { display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; background: #fff; border-bottom: 1px solid #e8e8e8; position: relative; }
-    .nav-logo-link { display: flex; flex-direction: column; align-items: center; text-decoration: none; }
-    .nav-logo-script { font-size: 1.8rem; font-weight: bold; color: #2c2c2c; font-family: 'Lucida Handwriting', cursive; }
-    .nav-logo-sub { font-size: 0.7rem; letter-spacing: 0.15em; color: #8b6f47; text-transform: uppercase; }
+    nav { display: flex; align-items: center; justify-content: center; gap: 32px; padding: 0 40px; min-height: 120px; border-bottom: 1px solid #e8e8e8; position: sticky; top: 0; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); z-index: 50; }
+    .nav-logo-link { flex-shrink: 0; }
+    .nav-logo-img { height: 100px; width: auto; display: block; }
 
     .nav-toggle { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
     .nav-toggle span { width: 25px; height: 3px; background: #2c2c2c; border-radius: 2px; transition: 0.3s; }
 
     .nav-links { display: flex; gap: 2rem; align-items: center; }
-    .nav-links a { font-size: 0.95rem; position: relative; }
-    .nav-links a.active::after { content: ''; position: absolute; bottom: -8px; left: 0; right: 0; height: 2px; background: #8b6f47; }
+    .nav-links a { font-family: 'Roadway', Futura, 'Trebuchet MS', Arial, sans-serif; font-size: 15px; letter-spacing: 0.5px; text-transform: lowercase; font-weight: 400; color: #D8A74A; position: relative; }
+    .nav-links a:hover { color: #b8903a; }
+    .nav-links a.active::after { content: ''; position: absolute; bottom: -8px; left: 0; right: 0; height: 2px; background: #D8A74A; }
 
-    .nav-btn { padding: 0.6rem 1.5rem; border: 2px solid #8b6f47; border-radius: 4px; font-weight: bold; transition: all 0.3s; }
-    .nav-btn:hover { background: #8b6f47; color: #fff; }
+    .nav-btn { padding: 12px 24px; border: 1px solid #D8A74A; color: #D8A74A !important; letter-spacing: 2.2px; text-transform: lowercase; border-radius: 0; font-weight: 400; transition: all 0.3s; }
+    .nav-btn:hover { background: #D8A74A; color: #fff !important; }
+
+    .nav-michelin { flex-shrink: 0; margin-left: auto; transition: transform 0.3s; }
+    .nav-michelin:hover { transform: scale(1.08); }
 
     @media (max-width: 768px) {
+      nav { flex-wrap: wrap; min-height: 80px; padding: 12px 20px; justify-content: space-between; }
       .nav-toggle { display: flex; }
-      .nav-links { position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; background: #fff; padding: 1rem; gap: 1rem; display: none; border-bottom: 1px solid #e8e8e8; }
+      .nav-links { position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); padding: 1rem; gap: 1rem; display: none; border-bottom: 1px solid #e8e8e8; z-index: 49; }
       .nav-links.open { display: flex; }
+      .nav-michelin { display: none; }
     }
 
     .text-section { padding: 3rem 2rem; max-width: 900px; margin: 0 auto; }
@@ -87,8 +92,7 @@
 
 <nav>
   <a href="index.html" class="nav-logo-link">
-    <span class="nav-logo-script">Jolie</span>
-    <span class="nav-logo-sub">bistro fran&ccedil;ais</span>
+    <img src="https://restaurantjolie.com/backend/wp-content/themes/jolie/img/logo.gif" alt="Jolie" class="nav-logo-img">
   </a>
   <div class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
     <span></span><span></span><span></span>
@@ -97,11 +101,14 @@
     <a href="menu.html">Menu</a>
     <a href="about.html">About</a>
     <a href="rooftop.html">Le Rooftop</a>
-    <a href="events.html">Private Events</a>
+    <a href="events.html">Events</a>
     <a href="press.html">Press</a>
     <a href="contact.html">Contact</a>
     <a href="https://www.exploretock.com/restaurantjolie" target="_blank" rel="noopener" class="nav-btn">Reservations</a>
   </div>
+  <a href="https://guide.michelin.com/us/en/north-carolina/raleigh_2149711/restaurant/jolie" target="_blank" rel="noopener" class="nav-michelin" aria-label="MICHELIN Guide 2025">
+    <svg viewBox="0 0 100 100" width="50" height="50"><circle cx="50" cy="50" r="48" fill="#C4002B"/><text x="50" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="'Helvetica Neue',Arial,sans-serif" letter-spacing="2">MICHELIN</text><line x1="25" y1="44" x2="75" y2="44" stroke="rgba(255,255,255,0.4)" stroke-width="0.5"/><text x="50" y="62" text-anchor="middle" font-size="20" font-weight="700" fill="#fff" font-family="'Helvetica Neue',Arial,sans-serif" letter-spacing="3">2025</text><text x="50" y="78" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.8)" font-family="'Helvetica Neue',Arial,sans-serif" letter-spacing="1">GUIDE</text></svg>
+  </a>
 </nav>
 
 <div class="text-section fade-in">

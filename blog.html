@@ -55,8 +55,13 @@
     .card-date { font-size: 0.85rem; color: #8b6f47; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
     .card h3 { font-size: 1.4rem; margin-bottom: 1rem; color: #2c2c2c; line-height: 1.4; }
     .card p { font-size: 0.95rem; color: #555; line-height: 1.7; margin-bottom: 1rem; }
-    .card-link { font-weight: bold; color: #8b6f47; transition: color 0.3s; }
-    .card-link:hover { color: #6b5838; }
+    .card-button { display: inline-block; padding: 0.5rem 0; font-weight: bold; color: #8b6f47; cursor: pointer; border: none; background: none; transition: color 0.3s; font-family: inherit; font-size: 0.95rem; }
+    .card-button:hover { color: #6b5838; }
+    .blog-expanded { display: none; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e8e8e8; }
+    .blog-expanded.open { display: block; }
+    .blog-expanded p { font-size: 0.95rem; color: #555; line-height: 1.7; margin-bottom: 1rem; }
+    .blog-expanded a { color: #8b6f47; font-weight: 500; }
+    .blog-expanded a:hover { color: #6b5838; }
 
     .fade-in { opacity: 0; transition: opacity 0.8s ease-in; }
     .fade-in.visible { opacity: 1; }
@@ -90,23 +95,27 @@
 </head>
 <body>
 
-<nav>
-  <a href="index.html" class="nav-logo-link">
-    <span class="nav-logo-script">Jolie</span>
-    <span class="nav-logo-sub">bistro fran&ccedil;ais</span>
+<nav style="display:flex;align-items:center;justify-content:center;gap:32px;padding:0 40px;min-height:120px;border-bottom:1px solid #e8e0d4;position:sticky;top:0;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);z-index:50;">
+  <a href="index.html" style="text-decoration:none;display:block;flex-shrink:0;">
+    <img src="https://restaurantjolie.com/backend/wp-content/themes/jolie/img/logo.gif" alt="Jolie" style="height:100px;width:auto;display:block;">
   </a>
-  <div class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
-    <span></span><span></span><span></span>
+  <div class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" style="display:none;cursor:pointer;">
+    <span style="display:block;width:24px;height:2px;background:#2D2D2D;margin:5px 0;"></span>
+    <span style="display:block;width:24px;height:2px;background:#2D2D2D;margin:5px 0;"></span>
+    <span style="display:block;width:24px;height:2px;background:#2D2D2D;margin:5px 0;"></span>
   </div>
-  <div class="nav-links">
-    <a href="menu.html">Menu</a>
-    <a href="about.html">About</a>
-    <a href="rooftop.html">Le Rooftop</a>
-    <a href="events.html">Private Events</a>
-    <a href="press.html">Press</a>
-    <a href="contact.html">Contact</a>
-    <a href="https://www.exploretock.com/restaurantjolie" target="_blank" rel="noopener" class="nav-btn">Reservations</a>
+  <div class="nav-links" style="display:contents;">
+    <a href="menu.html" style="color:#D8A74A;text-decoration:none;font-family:'Roadway',Futura,'Trebuchet MS',Arial,sans-serif;font-size:15px;letter-spacing:0.5px;text-transform:lowercase;font-weight:400;">Menu</a>
+    <a href="about.html" style="color:#D8A74A;text-decoration:none;font-family:'Roadway',Futura,'Trebuchet MS',Arial,sans-serif;font-size:15px;letter-spacing:0.5px;text-transform:lowercase;font-weight:400;">About</a>
+    <a href="rooftop.html" style="color:#D8A74A;text-decoration:none;font-family:'Roadway',Futura,'Trebuchet MS',Arial,sans-serif;font-size:15px;letter-spacing:0.5px;text-transform:lowercase;font-weight:400;">Le Rooftop</a>
+    <a href="events.html" style="color:#D8A74A;text-decoration:none;font-family:'Roadway',Futura,'Trebuchet MS',Arial,sans-serif;font-size:15px;letter-spacing:0.5px;text-transform:lowercase;font-weight:400;">Events</a>
+    <a href="press.html" style="color:#D8A74A;text-decoration:none;font-family:'Roadway',Futura,'Trebuchet MS',Arial,sans-serif;font-size:15px;letter-spacing:0.5px;text-transform:lowercase;font-weight:400;">Press</a>
+    <a href="contact.html" style="color:#D8A74A;text-decoration:none;font-family:'Roadway',Futura,'Trebuchet MS',Arial,sans-serif;font-size:15px;letter-spacing:0.5px;text-transform:lowercase;font-weight:400;">Contact</a>
+    <a href="https://www.exploretock.com/restaurantjolie" target="_blank" rel="noopener" style="border:1px solid #D8A74A;color:#D8A74A;padding:12px 24px;letter-spacing:2.2px;text-transform:lowercase;text-decoration:none;font-family:'Roadway',Futura,'Trebuchet MS',Arial,sans-serif;font-size:15px;">Reservations</a>
   </div>
+  <a href="https://guide.michelin.com/us/en/north-carolina/raleigh_2149711/restaurant/jolie" target="_blank" rel="noopener" style="flex-shrink:0;margin-left:auto;" aria-label="MICHELIN Guide 2025">
+    <svg viewBox="0 0 100 100" width="50" height="50"><circle cx="50" cy="50" r="48" fill="#C4002B"/><text x="50" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="'Helvetica Neue',Arial,sans-serif" letter-spacing="2">MICHELIN</text><line x1="25" y1="44" x2="75" y2="44" stroke="rgba(255,255,255,0.4)" stroke-width="0.5"/><text x="50" y="62" text-anchor="middle" font-size="20" font-weight="700" fill="#fff" font-family="'Helvetica Neue',Arial,sans-serif" letter-spacing="3">2025</text><text x="50" y="78" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.8)" font-family="'Helvetica Neue',Arial,sans-serif" letter-spacing="1">GUIDE</text></svg>
+  </a>
 </nav>
 
 <div class="text-section fade-in">
@@ -117,45 +126,108 @@
 <div class="text-section">
   <div class="card-grid fade-in">
     <div class="card">
+      <div class="card-date">March 10, 2026</div>
+      <h3>5 Reasons Jolie Is the Perfect Rehearsal Dinner Venue</h3>
+      <p>From our intimate rooftop to curated French menus, discover why couples choose Jolie for their rehearsal dinner in Raleigh.</p>
+      <button class="card-button" onclick="this.nextElementSibling.classList.toggle('open')">Read More</button>
+      <div class="blog-expanded">
+        <p>Planning a rehearsal dinner that captures the spirit of your wedding? Jolie offers the perfect blend of elegance, intimacy, and exceptional cuisine that makes your pre-wedding celebration unforgettable.</p>
+        <p><strong>Our Rooftop Setting:</strong> Our stunning rooftop patio provides a sophisticated yet relaxed atmosphere, perfect for toasts, mingling, and creating memories under the stars.</p>
+        <p><strong>Custom Menus:</strong> Our culinary team works with you to design a menu that reflects your vision—whether you want a multi-course tasting or family-style French fare.</p>
+        <p><strong>Proximity to Downtown Hotels:</strong> Located in Historic Oakwood, we're perfectly positioned for your out-of-town guests staying near downtown Raleigh.</p>
+        <p><strong>Intimate Bistro Atmosphere:</strong> From candlelit tables to French wine selections, every detail creates the romance and sophistication you're looking for.</p>
+        <p><strong>Dedicated Events Team:</strong> Our experienced team handles every detail so you can focus on celebrating with your loved ones.</p>
+        <p><a href="events.html">Explore our private events options →</a></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-date">March 5, 2026</div>
+      <h3>Planning a Private Event at Jolie</h3>
+      <p>Whether it's a corporate gathering or a milestone celebration, our French bistro offers a one-of-a-kind setting for private events in Raleigh.</p>
+      <button class="card-button" onclick="this.nextElementSibling.classList.toggle('open')">Read More</button>
+      <div class="blog-expanded">
+        <p>From intimate dinners to grand celebrations, Jolie provides the perfect venue for your private event. Our team specializes in creating unforgettable experiences tailored to your unique vision.</p>
+        <p><strong>Buyout Options:</strong> Whether you want an exclusive rooftop rental or a full restaurant buyout, we offer flexible options to accommodate your guest count and vision.</p>
+        <p><strong>Seasonal Menu Customization:</strong> Work with our executive chef to design a custom menu that showcases the finest seasonal ingredients and French techniques.</p>
+        <p><strong>AV & Tech for Corporate Events:</strong> Our private spaces feature state-of-the-art technology for presentations, video calls, and multimedia needs.</p>
+        <p><strong>How to Inquire:</strong> Ready to plan your perfect event? <a href="events.html">Visit our Events page</a> for details, or <a href="contact.html">contact us directly</a> to discuss your needs with our events coordinator.</p>
+        <p>Let us help you create an experience your guests will remember for years to come.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-date">February 28, 2026</div>
+      <h3>Le Rooftop: Raleigh's Best-Kept Secret for Outdoor Dining</h3>
+      <p>Our rooftop patio offers panoramic views and a curated cocktail and small plates menu — available for private rental.</p>
+      <button class="card-button" onclick="this.nextElementSibling.classList.toggle('open')">Read More</button>
+      <div class="blog-expanded">
+        <p>There's something magical about dining al fresco in a sophisticated urban setting. Our rooftop patio at Jolie offers exactly that—a serene escape from the hustle of downtown Raleigh, with unobstructed views and an atmosphere that's both refined and relaxed.</p>
+        <p><strong>The Rooftop Vibe:</strong> Picture twinkling bistro lights, comfortable seating, and a carefully curated selection of French wines and craft cocktails. Whether you're on a romantic date or celebrating with friends, the rooftop creates the perfect backdrop for an unforgettable evening.</p>
+        <p><strong>Seasonal Availability:</strong> From spring blooms to summer breezes and crisp fall nights, our rooftop transforms with the seasons. We also provide heat and covered areas for year-round dining.</p>
+        <p><strong>Capacity & Private Rentals:</strong> Perfect for groups of all sizes, our rooftop can be reserved exclusively for your event—whether it's a wedding celebration, corporate outing, or intimate gathering.</p>
+        <p><a href="rooftop.html">Learn more about Le Rooftop →</a></p>
+      </div>
+    </div>
+
+    <div class="card">
       <div class="card-date">November 15, 2025</div>
       <h3>A Taste of Paris on Person Street</h3>
       <p>Jolie was born from a cherished family memory and a dream to bring authentic French bistro culture to Raleigh. Years ago, our family took a transformative trip to Paris, wandering through charming neighborhoods, savoring simple yet elegant meals, and discovering the true meaning of joie de vivre. That experience inspired us to create a space where locals could experience that same magic right here in Historic Oakwood. Our daughter, Jolie, became the namesake of this restaurant—a tribute to her radiant spirit and the joy we wanted to share with every guest who walks through our doors.</p>
-      <a href="#" class="card-link">Read More</a>
+      <button class="card-button" onclick="this.nextElementSibling.classList.toggle('open')">Read More</button>
+      <div class="blog-expanded">
+        <p>The inspiration for Jolie runs deep. Every element—from our classic bistro design to our carefully curated wine list—reflects our commitment to authentic French hospitality. We believe in honest food, impeccable service, and creating moments that matter.</p>
+      </div>
     </div>
 
     <div class="card">
       <div class="card-date">September 20, 2025</div>
       <h3>Dining Under the Stars on Le Rooftop</h3>
       <p>There's something truly magical about dining under the open sky, surrounded by the gentle breeze and twinkling lights. Our rooftop space, designed in collaboration with the visionary team at Louis Cherry Architecture, offers an unforgettable culinary experience. Whether you're enjoying a summer evening or a crisp fall night, Le Rooftop provides the perfect atmosphere for intimate dinners, celebrations, or simply savoring French classics with a view of Raleigh's skyline. From aperitifs to dessert, every moment feels timeless when you're dining under the stars at Jolie.</p>
-      <a href="#" class="card-link">Read More</a>
+      <button class="card-button" onclick="this.nextElementSibling.classList.toggle('open')">Read More</button>
+      <div class="blog-expanded">
+        <p>Our rooftop is more than just a dining space—it's a destination. The thoughtful design by Louis Cherry Architecture seamlessly blends contemporary comfort with timeless French elegance, creating an environment where every detail enhances your experience.</p>
+      </div>
     </div>
 
     <div class="card">
       <div class="card-date">July 10, 2025</div>
       <h3>French Bistro Classics Meet North Carolina</h3>
       <p>At Jolie, we honor traditional French culinary techniques while celebrating the incredible local ingredients that North Carolina has to offer. Our chef sources from nearby farms and producers, ensuring that every plate reflects both authentic French tradition and regional pride. From locally sourced beef and fresh seafood to seasonal vegetables that showcase the best of the Piedmont, we believe that great cuisine is about respecting ingredients and technique equally. This commitment to farm-to-table dining hasn't gone unnoticed—our dedication to excellence has earned us recognition in the MICHELIN Guide, a testament to our team's passion and precision in the kitchen.</p>
-      <a href="#" class="card-link">Read More</a>
+      <button class="card-button" onclick="this.nextElementSibling.classList.toggle('open')">Read More</button>
+      <div class="blog-expanded">
+        <p>Our philosophy is simple: exceptional ingredients + French technique = unforgettable cuisine. We build relationships with local farmers, fishmongers, and producers to ensure we're serving the freshest, highest-quality products available.</p>
+      </div>
     </div>
 
     <div class="card">
       <div class="card-date">May 1, 2025</div>
       <h3>Hosting Your Celebration at Jolie</h3>
       <p>Whether you're planning an intimate rehearsal dinner, a milestone birthday celebration, or a romantic proposal, Jolie offers the perfect backdrop for your special moments. Our private event spaces, including exclusive rooftop buyouts, can be customized to match your vision. From curated tasting menus to wine pairings, our team works closely with you to ensure every detail reflects your style and honors your guests. Imagine celebrating surrounded by candlelight, French ambiance, and world-class cuisine. Let us help you create memories that will last a lifetime at Jolie.</p>
-      <a href="#" class="card-link">Read More</a>
+      <button class="card-button" onclick="this.nextElementSibling.classList.toggle('open')">Read More</button>
+      <div class="blog-expanded">
+        <p>Your celebration deserves a setting that matches its importance. From the moment your guests arrive, they'll experience the warmth, elegance, and attention to detail that define Jolie. Our team is here to make your vision a reality.</p>
+      </div>
     </div>
 
     <div class="card">
       <div class="card-date">March 15, 2025</div>
       <h3>The Art of the French Wine List</h3>
       <p>Our wine program is more than just a collection—it's a carefully curated journey through French viticulture and beyond. Our sommelier team has handpicked selections that complement our menu while introducing guests to both classics and hidden gems. Whether you're a seasoned wine enthusiast or exploring your palate, our team is here to guide you through pairings that elevate your dining experience. Beyond wine, our craft cocktail program draws inspiration from classic French aperitifs, created with precision and served with style. Every sip at Jolie tells a story of tradition, passion, and discovery.</p>
-      <a href="#" class="card-link">Read More</a>
+      <button class="card-button" onclick="this.nextElementSibling.classList.toggle('open')">Read More</button>
+      <div class="blog-expanded">
+        <p>Wine isn't just what's in the glass—it's about the story, the terroir, and the connection between bottle and plate. Our sommelier team is passionate about sharing that story with you, whether you're exploring a new region or revisiting an old favorite.</p>
+      </div>
     </div>
 
     <div class="card">
       <div class="card-date">January 20, 2025</div>
       <h3>A Family Table: The Crawford Hospitality Story</h3>
       <p>Jolie is part of a larger tapestry of exceptional dining experiences crafted by the Crawford Hospitality family. From the elegant simplicity of Crawford & Son and the rustic elegance of Brodeto, to the classic steakhouse tradition of Crawford Brothers and the intimate ambiance of Bar Sousterre, our collective vision celebrates the art of hospitality in all its forms. Each concept is distinct, yet all are united by our commitment to culinary excellence, impeccable service, and creating spaces where memories are made. We invite you to explore our sister restaurants and discover the unique story each one tells. Together, we're redefining dining in Raleigh, one table at a time.</p>
-      <a href="#" class="card-link">Read More</a>
+      <button class="card-button" onclick="this.nextElementSibling.classList.toggle('open')">Read More</button>
+      <div class="blog-expanded">
+        <p>Crawford Hospitality isn't just a restaurant group—it's a family legacy built on a foundation of hospitality, quality, and innovation. Each of our concepts reflects a different facet of this commitment, offering something unique for every occasion and palate.</p>
+      </div>
     </div>
   </div>
 </div>
