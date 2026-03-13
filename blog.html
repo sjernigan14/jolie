@@ -1,240 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Stories, updates, and behind-the-scenes from Jolie, a MICHELIN Guide Selected French bistro in Historic Oakwood, Raleigh NC.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stories, recipes, and behind-the-scenes from Jolie French Bistro in Raleigh NC.">
+  <link rel="canonical" href="https://restaurantjolie.com/blog.html">
+  <title>Stories from Jolie | French Bistro | Raleigh, NC</title>
 
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Stories from Jolie | French Bistro | Raleigh, NC">
-    <meta property="og:description" content="Stories, updates, and behind-the-scenes from Jolie, a MICHELIN Guide Selected French bistro in Historic Oakwood, Raleigh NC.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://restaurantjolie.com/blog">
-    <meta property="og:image" content="https://restaurantjolie.com/images/og-image.jpg">
-    <meta property="og:site_name" content="Jolie">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Stories from Jolie | French Bistro | Raleigh, NC">
+  <meta property="og:description" content="Stories, recipes, and behind-the-scenes from Jolie French Bistro in Raleigh NC.">
+  <meta property="og:image" content="https://www.dropbox.com/scl/fi/yedkg7m1pm1nqhcd9oj3t/Jolie-full-bar-seating-credit-Jessica-Crawford.jpg?rlkey=cwy4tqag9hijghgf5eextud1x&raw=1">
+  <meta property="og:url" content="https://restaurantjolie.com/blog.html">
 
-    <!-- GA4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LRNSS9TTFS"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-LRNSS9TTFS');
-    </script>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Stories from Jolie | French Bistro | Raleigh, NC">
+  <meta name="twitter:description" content="Stories, recipes, and behind-the-scenes from Jolie French Bistro in Raleigh NC.">
+  <meta name="twitter:image" content="https://www.dropbox.com/scl/fi/yedkg7m1pm1nqhcd9oj3t/Jolie-full-bar-seating-credit-Jessica-Crawford.jpg?rlkey=cwy4tqag9hijghgf5eextud1x&raw=1">
 
-    <!-- FB Pixel -->
-    <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '521660761939680');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=521660761939680&ev=PageView&noscript=1" /></noscript>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Georgia', serif; color: #2c2c2c; line-height: 1.6; }
+    a { color: #8b6f47; text-decoration: none; transition: color 0.3s; }
+    a:hover { color: #6b5838; }
 
-    <title>Stories from Jolie | French Bistro | Raleigh, NC</title>
-    <link rel="stylesheet" href="css/style.css">
+    nav { display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; background: #fff; border-bottom: 1px solid #e8e8e8; position: relative; }
+    .nav-logo-link { display: flex; flex-direction: column; align-items: center; text-decoration: none; }
+    .nav-logo-script { font-size: 1.8rem; font-weight: bold; color: #2c2c2c; font-family: 'Lucida Handwriting', cursive; }
+    .nav-logo-sub { font-size: 0.7rem; letter-spacing: 0.15em; color: #8b6f47; text-transform: uppercase; }
+
+    .nav-toggle { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+    .nav-toggle span { width: 25px; height: 3px; background: #2c2c2c; border-radius: 2px; transition: 0.3s; }
+
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { font-size: 0.95rem; position: relative; }
+    .nav-links a.active::after { content: ''; position: absolute; bottom: -8px; left: 0; right: 0; height: 2px; background: #8b6f47; }
+
+    .nav-btn { padding: 0.6rem 1.5rem; border: 2px solid #8b6f47; border-radius: 4px; font-weight: bold; transition: all 0.3s; }
+    .nav-btn:hover { background: #8b6f47; color: #fff; }
+
+    @media (max-width: 768px) {
+      .nav-toggle { display: flex; }
+      .nav-links { position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; background: #fff; padding: 1rem; gap: 1rem; display: none; border-bottom: 1px solid #e8e8e8; }
+      .nav-links.open { display: flex; }
+    }
+
+    .text-section { padding: 3rem 2rem; max-width: 900px; margin: 0 auto; }
+    .section-label { font-size: 0.8rem; letter-spacing: 0.2em; color: #8b6f47; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .text-section h2 { font-size: 2.5rem; margin-bottom: 2rem; color: #2c2c2c; }
+
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0; }
+    .card { padding: 1.5rem; border: 1px solid #e8e8e8; border-radius: 4px; background: #fff; transition: box-shadow 0.3s; }
+    .card:hover { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+    .card-date { font-size: 0.85rem; color: #8b6f47; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+    .card h3 { font-size: 1.4rem; margin-bottom: 1rem; color: #2c2c2c; line-height: 1.4; }
+    .card p { font-size: 0.95rem; color: #555; line-height: 1.7; margin-bottom: 1rem; }
+    .card-link { font-weight: bold; color: #8b6f47; transition: color 0.3s; }
+    .card-link:hover { color: #6b5838; }
+
+    .fade-in { opacity: 0; transition: opacity 0.8s ease-in; }
+    .fade-in.visible { opacity: 1; }
+
+    .sister-concepts { padding: 3rem 2rem; text-align: center; background: #f9f9f9; }
+    .sister-concepts h2 { font-size: 2rem; margin-bottom: 2rem; color: #2c2c2c; }
+    .sister-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+    .sister-links a { font-size: 1.1rem; color: #8b6f47; font-weight: 500; }
+    .sister-links a:hover { color: #6b5838; }
+
+    footer { background: #2c2c2c; color: #fff; padding: 3rem 2rem; text-align: center; }
+    .footer-logo { font-family: 'Lucida Handwriting', cursive; font-size: 2rem; margin-bottom: 1rem; }
+    footer p { margin: 0.5rem 0; font-size: 0.95rem; }
+    footer a { color: #d4af99; }
+    footer a:hover { color: #e8c7b0; }
+
+    .footer-social { display: flex; justify-content: center; gap: 1.5rem; margin: 1.5rem 0; }
+    .footer-social a { width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center; }
+    .footer-social svg { width: 100%; height: 100%; fill: #d4af99; transition: fill 0.3s; }
+    .footer-social a:hover svg { fill: #e8c7b0; }
+
+    .footer-link-sm { font-size: 0.9rem; }
+    .cc-notice { font-size: 0.85rem; color: #999; margin-top: 1rem; }
+    .footer-copy { font-size: 0.85rem; color: #999; margin-top: 1rem; }
+  </style>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LRNSS9TTFS"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-LRNSS9TTFS');</script>
+  <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','521660761939680');fbq('track','PageView');</script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=521660761939680&ev=PageView&noscript=1"/></noscript>
 </head>
 <body>
-    <!-- Navigation -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">
-        <svg viewBox="0 0 200 50" class="logo-svg">
-          <text x="100" y="28" text-anchor="middle" font-family="Perpetua, serif" font-size="32" letter-spacing="8" fill="#2D2D2D" font-weight="400">✦ JOLIE ✦</text>
-          <text x="100" y="44" text-anchor="middle" font-family="Perpetua, serif" font-size="10" letter-spacing="3" fill="#D8A74A" font-style="italic">bistro francais</text>
-        </svg>
-      </a>
-      <a href="https://guide.michelin.com/us/en/north-carolina/raleigh_2149711/restaurant/jolie" target="_blank" rel="noopener" class="michelin-badge" title="MICHELIN Guide 2025">
-        <svg viewBox="0 0 100 100" class="michelin-svg" width="44" height="44">
-          <circle cx="50" cy="50" r="48" fill="#C4002B" stroke="#A00020" stroke-width="1"/>
-          <circle cx="50" cy="50" r="43" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
-          <text x="50" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF" font-family="'Helvetica Neue', Arial, sans-serif" letter-spacing="2">MICHELIN</text>
-          <line x1="25" y1="44" x2="75" y2="44" stroke="rgba(255,255,255,0.4)" stroke-width="0.5"/>
-          <text x="50" y="62" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF" font-family="'Helvetica Neue', Arial, sans-serif" letter-spacing="3">2025</text>
-          <text x="50" y="78" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.8)" font-family="'Helvetica Neue', Arial, sans-serif" letter-spacing="1">GUIDE</text>
-        </svg>
-      </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="menu.html">MENU</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="rooftop.html">LE ROOFTOP</a></li>
-        <li><a href="events.html">EVENTS</a></li>
-        <li><a href="press.html">PRESS</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
-        <li><a href="https://www.exploretock.com/restaurantjolie" target="_blank" rel="noopener" class="btn-gold nav-cta">RESERVATIONS</a></li>
-      </ul>
+
+<nav>
+  <a href="index.html" class="nav-logo-link">
+    <span class="nav-logo-script">Jolie</span>
+    <span class="nav-logo-sub">bistro fran&ccedil;ais</span>
+  </a>
+  <div class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+  <div class="nav-links">
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About</a>
+    <a href="rooftop.html">Le Rooftop</a>
+    <a href="events.html">Private Events</a>
+    <a href="press.html">Press</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://www.exploretock.com/restaurantjolie" target="_blank" rel="noopener" class="nav-btn">Reservations</a>
+  </div>
+</nav>
+
+<div class="text-section fade-in">
+  <div class="section-label">Stories</div>
+  <h2>Stories from Jolie</h2>
+</div>
+
+<div class="text-section">
+  <div class="card-grid fade-in">
+    <div class="card">
+      <div class="card-date">November 15, 2025</div>
+      <h3>A Taste of Paris on Person Street</h3>
+      <p>Jolie was born from a cherished family memory and a dream to bring authentic French bistro culture to Raleigh. Years ago, our family took a transformative trip to Paris, wandering through charming neighborhoods, savoring simple yet elegant meals, and discovering the true meaning of joie de vivre. That experience inspired us to create a space where locals could experience that same magic right here in Historic Oakwood. Our daughter, Jolie, became the namesake of this restaurant—a tribute to her radiant spirit and the joy we wanted to share with every guest who walks through our doors.</p>
+      <a href="#" class="card-link">Read More</a>
     </div>
-  </nav>
 
-    <!-- Hero Section -->
-    <section class="hero blog-hero" style="height: 40vh;">
-        <div class="hero-content">
-            <h1 class="hero-title memimas">stories</h1>
-            <p class="hero-subtitle roadway">from our table to yours</p>
-        </div>
-    </section>
-
-    <!-- Blog Posts -->
-    <section class="blog-section">
-        <div class="blog-container">
-
-            <!-- Blog Post 1: A Taste of Paris on Person Street -->
-            <article class="blog-post fade-in-up">
-                <div class="post-date">January 15, 2026</div>
-                <h2 class="post-title">A Taste of Paris on Person Street</h2>
-                <div class="post-content">
-                    <p>There's something magical about stepping through the doors of Jolie—a moment where the bustling energy of Historic Oakwood melts away, and you're transported to the warm, intimate embrace of a true French bistro. Named after Scott Crawford's beloved daughter, Jolie represents not just a restaurant, but a philosophy: the belief that exceptional food and genuine hospitality should be woven into the fabric of our community.</p>
-
-                    <p>When you visit Jolie, you're stepping into a carefully crafted world of French bistro tradition. The menu celebrates classic dishes executed with precision—think steak frites with a perfect crust and yielding interior, escargot perfumed with garlic and parsley, and the kind of sauce work that takes years to master. But this isn't about nostalgia or self-conscious tradition; it's about honoring the fundamental techniques and flavors that make French bistro cuisine timeless, while infusing them with the energy and personality of modern Raleigh.</p>
-
-                    <p>We're open Tuesday through Saturday from 5pm to 10pm, welcoming both reservations through Tock and walk-in guests based on availability. Our location at 620 N. Person Street puts us at the heart of Historic Oakwood, a neighborhood that embodies the same character and warmth we strive for in every plate we serve. Whether you're celebrating a milestone, enjoying a quiet dinner for two, or simply seeking an evening of beautiful food and thoughtful service, Jolie is here to make it memorable.</p>
-
-                    <p>The story of Jolie is the story of Crawford Hospitality—a family committed to elevating dining culture in North Carolina through passion, precision, and an unwavering dedication to our guests and our community.</p>
-                </div>
-            </article>
-
-            <!-- Blog Post 2: Dining Under the Stars on Le Rooftop -->
-            <article class="blog-post fade-in-up">
-                <div class="post-date">November 8, 2025</div>
-                <h2 class="post-title">Dining Under the Stars on Le Rooftop</h2>
-                <div class="post-content">
-                    <p>One of Raleigh's most coveted dining experiences awaits you above the streets of Historic Oakwood. Le Rooftop at Jolie offers something increasingly rare in our city: an authentic rooftop dining venue designed with meticulous attention to beauty and comfort. This isn't an afterthought or a seasonal pop-up; it's a permanent testament to our commitment to creating extraordinary spaces where guests can celebrate life's important moments.</p>
-
-                    <p>Designed by the talented team at Louis Cherry Architecture, Le Rooftop transforms an ordinary evening into something extraordinary. A custom canopy provides weather protection without sacrificing the magic of dining under the open sky, while lush greenery and carefully curated landscaping create a garden-like oasis above the city. Candlelit tables cast a warm, romantic glow, and the thoughtful design ensures that each guest enjoys both privacy and a sense of connection to the energy around them. Whether it's a summer evening with a gentle breeze or a cooler autumn night, our team carefully manages weather considerations to ensure your comfort year-round.</p>
-
-                    <p>Le Rooftop accommodates intimate dinners for two as well as larger celebrations. We welcome private buyouts for groups up to 30 guests, making it an exceptional choice for engagements, anniversaries, birthdays, and corporate events. The combination of our refined French bistro cuisine, an all-French wine list, and the undeniable romance of rooftop dining creates memories that linger long after the last course.</p>
-
-                    <p>This is what rooftop dining in Raleigh should be: a destination that marries culinary excellence with stunning ambiance, proving that you don't need to travel to Paris to find that quintessential French experience.</p>
-                </div>
-            </article>
-
-            <!-- Blog Post 3: French Bistro Classics Meet North Carolina -->
-            <article class="blog-post fade-in-up">
-                <div class="post-date">September 22, 2025</div>
-                <h2 class="post-title">French Bistro Classics Meet North Carolina</h2>
-                <div class="post-content">
-                    <p>At the heart of Jolie's culinary philosophy lies a beautiful paradox: honoring the refined techniques and time-tested recipes of French bistro tradition while celebrating the exceptional ingredients that make North Carolina's food scene so compelling. Chef Scott Crawford has spent his career understanding that the best bistro food isn't precious or complicated—it's about taking the finest ingredients and treating them with respect, allowing their character to shine through masterful technique and thoughtful preparation.</p>
-
-                    <p>Our farm-to-table approach means building relationships with local producers who share our commitment to quality. Seasonal vegetables arrive at our kitchen at peak ripeness, proteins are sourced from trusted suppliers who understand sustainable and humane practices, and every element on the plate reflects both our location and our values. When you order steak frites at Jolie, you're enjoying impeccably selected beef prepared with the classical technique that makes this humble dish a cornerstone of bistro culture worldwide. When you try our escargot, you taste garlic, parsley, and butter in perfect harmony—simplicity perfected through practice and precision.</p>
-
-                    <p>But our menu isn't frozen in time. Alongside the classics that define bistro cuisine, Chef Crawford crafts seasonal dishes that celebrate what's best right now. Perhaps a composed salad with local lettuces and vegetables prepared in the French classical style, or an innovative preparation of North Carolina seafood that speaks to both tradition and the present moment. This balance—respecting tradition while staying alive to possibility—is what keeps our menu vital and exciting for guests who visit regularly.</p>
-
-                    <p>We invite you to discover what happens when French bistro mastery meets the incredible bounty of North Carolina. Reserve your table and experience the philosophy that drives everything we create.</p>
-                </div>
-            </article>
-
-            <!-- Blog Post 4: Hosting Your Celebration at Jolie -->
-            <article class="blog-post fade-in-up">
-                <div class="post-date">July 14, 2025</div>
-                <h2 class="post-title">Hosting Your Celebration at Jolie</h2>
-                <div class="post-content">
-                    <p>Life's most meaningful moments deserve a setting that honors them. Whether you're celebrating an engagement, a milestone birthday, an anniversary, or a corporate gathering, Jolie offers the ambiance, cuisine, and hospitality to make your event unforgettable. From intimate dinner parties to larger celebrations, we have the space and expertise to bring your vision to life.</p>
-
-                    <p>Le Rooftop, our signature dining venue, is particularly popular for celebrations. Its romantic ambiance, garden-like setting, and capacity for up to 30 guests make it ideal for engagements, anniversaries, and milestone moments. Picture this: candles flickering across tables draped in soft lighting, the kitchen below sending up course after course of carefully prepared French bistro cuisine, and your closest friends and family gathered around you in one of Raleigh's most beautiful settings. For larger groups or different dining preferences, we can arrange a full restaurant buyout, giving you and your guests exclusive access to our entire space.</p>
-
-                    <p>Our events coordinator, Kat Rider, specializes in making celebrations seamless and stress-free. She works closely with you to understand your vision, preferences, and any special requirements. Whether you're planning an elaborate multi-course menu tasting or a more casual approach, our team crafts an experience tailored specifically to your celebration. Kat can be reached at kat@restaurantjolie.com or 919-803-7221 to begin the conversation about your event.</p>
-
-                    <p>At Jolie, we understand that the finest restaurants are really in the business of creating memories. We'd be honored to be part of yours.</p>
-                </div>
-            </article>
-
-            <!-- Blog Post 5: The Art of the French Wine List -->
-            <article class="blog-post fade-in-up">
-                <div class="post-date">May 3, 2025</div>
-                <h2 class="post-title">The Art of the French Wine List</h2>
-                <div class="post-content">
-                    <p>A proper French bistro isn't complete without a wine program that understands the fundamental truth: wine exists to enhance the joy of food and company. At Jolie, our all-French wine list isn't a flex or a historical reenactment—it's a curated reflection of our philosophy about how wine and bistro cuisine belong together. Every bottle on our list has been selected because we believe it will elevate your meal and deepen your appreciation for the flavors in your glass.</p>
-
-                    <p>Our wine program celebrates the breadth and complexity of French winemaking traditions. From elegant Burgundies and Bordeaux to characterful wines from lesser-known regions, from prestigious producers to emerging winemakers who are pushing the boundaries of what's possible in their terroir, our list tells the story of French wine's incredible diversity. We believe that some of the most memorable wine experiences come not from the most expensive bottles, but from discovering a wine that perfectly complements your meal at a price that feels right—a well-made Côtes du Rhône or Loire Valley white that sings alongside our bistro cuisine.</p>
-
-                    <p>Beyond wine, our craft cocktail program applies the same philosophy of balance and intentionality. Our bartenders understand that a great cocktail is like a great dish—it's about harmony, quality ingredients, and technique. Whether you're enjoying a classic Negroni or a house creation that plays with traditional bistro flavors, each drink is prepared with the same care and precision that defines our kitchen.</p>
-
-                    <p>We invite you to explore our beverage program not as an intimidating exercise, but as an extension of the pleasure that great food creates. Our team is here to guide recommendations, answer questions, and help you discover pairings that delight you. Come sit at our bar, reserve a table, and let wine and food remind you why the French have been perfecting this dance for centuries.</p>
-                </div>
-            </article>
-
-            <!-- Blog Post 6: A Family Table: The Crawford Hospitality Story -->
-            <article class="blog-post fade-in-up">
-                <div class="post-date">March 18, 2025</div>
-                <h2 class="post-title">A Family Table: The Crawford Hospitality Story</h2>
-                <div class="post-content">
-                    <p>Behind every great restaurant lies a story of vision, persistence, and a fundamental belief in the power of food to bring people together. The Crawford Hospitality family—which includes Jolie, Crawford & Son, Brodeto, Crawford Brothers Steakhouse, and Bar Sousterre—shares a common thread that ties each concept together: a commitment to culinary excellence, genuine hospitality, and a deep roots in community. This isn't a restaurant group built on formulas or franchises; it's a family's evolving conversation about what it means to feed people well.</p>
-
-                    <p>Each Crawford restaurant expresses a different facet of this philosophy. Jolie celebrates the refinement and intimate joy of French bistro dining. Crawford & Son honors the craft of fine dining with seasonal creativity and technical mastery. Brodeto brings the vibrant energy and flavors of the Mediterranean to our table. Crawford Brothers Steakhouse represents the American tradition of a great steak and spirited hospitality. Bar Sousterre offers a sophisticated refuge for cocktails and conversation. Together, these five concepts create a dining landscape that reflects the breadth of culinary traditions and experiences that nourish us.</p>
-
-                    <p>But what truly defines Crawford Hospitality is the human element. We are a family business, built by people who care deeply about the quality of every experience—from the moment a guest walks through the door to the lasting impression of a meal they'll remember years later. Our team members aren't anonymous workers; they're part of a community that values growth, learning, and the genuine relationships that form when people work together toward something meaningful. We invest in our people because we understand that hospitality flows from real care and attention.</p>
-
-                    <p>This family table extends beyond our restaurants to the Raleigh community itself. We're committed to sourcing locally, supporting other businesses that share our values, and creating spaces where people from all walks of life can gather, celebrate, and connect. The Crawford Hospitality story is still being written—with each service, each guest, each meal, we're adding another chapter to what it means to be a family of restaurants dedicated to excellence and community. We invite you to pull up a chair and become part of our story.</p>
-                </div>
-            </article>
-
-        </div>
-    </section>
-
-    <!-- Footer -->
-  <section class="sister-concepts" id="Elsewhere">
-    <div class="container text-center">
-      <h2 class="roadway">Visit Our Sister Concepts</h2>
-      <div class="sister-links">
-        <a href="https://brodeto.com/" target="_blank" rel="noopener">Brodeto</a>
-        <a href="https://crawfordandsonrestaurant.com/" target="_blank" rel="noopener">Crawford &amp; Son</a>
-        <a href="https://www.instagram.com/barsousterre/" target="_blank" rel="noopener">Bar Sousterre</a>
-        <a href="https://crawfordbrotherssteakhouse.com/" target="_blank" rel="noopener">Crawford Brothers Steakhouse</a>
-      </div>
+    <div class="card">
+      <div class="card-date">September 20, 2025</div>
+      <h3>Dining Under the Stars on Le Rooftop</h3>
+      <p>There's something truly magical about dining under the open sky, surrounded by the gentle breeze and twinkling lights. Our rooftop space, designed in collaboration with the visionary team at Louis Cherry Architecture, offers an unforgettable culinary experience. Whether you're enjoying a summer evening or a crisp fall night, Le Rooftop provides the perfect atmosphere for intimate dinners, celebrations, or simply savoring French classics with a view of Raleigh's skyline. From aperitifs to dessert, every moment feels timeless when you're dining under the stars at Jolie.</p>
+      <a href="#" class="card-link">Read More</a>
     </div>
-  </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <svg viewBox="0 0 60 80" class="footer-monogram">
-            <text x="10" y="25" font-family="Perpetua, serif" font-size="18" fill="#D8A74A">6</text>
-            <text x="10" y="45" font-family="Perpetua, serif" font-size="18" fill="#D8A74A">2</text>
-            <text x="10" y="65" font-family="Perpetua, serif" font-size="18" fill="#D8A74A">0</text>
-            <text x="30" y="55" font-family="'Memimas Bold', cursive" font-size="40" fill="#D8A74A">J</text>
-          </svg>
-        </div>
-        <div class="footer-col">
-          <p>620 N. Person Street<br>Raleigh, NC 27604</p>
-          <p><a href="tel:9198037221">919.803.7221</a></p>
-          <p><a href="https://restaurantjolie.com/careers/">Careers at Jolie</a></p>
-        </div>
-        <div class="footer-col">
-          <div class="social-links">
-            <a href="https://www.instagram.com/jolierestaurant/" target="_blank" rel="noopener" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-            </a>
-            <a href="https://twitter.com/JolieRestaurant" target="_blank" rel="noopener" aria-label="Twitter">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            </a>
-            <a href="https://www.facebook.com/jolierestaurantraleigh" target="_blank" rel="noopener" aria-label="Facebook">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            </a>
-          </div>
-          <p class="footer-links-extra">
-            <a href="blog.html">Stories from Jolie</a> ·
-            <a href="https://crawfordandsonrestaurant.us14.list-manage.com/subscribe/?u=ee5052e648b8659c4336a89c4&id=8d9fd19e46" target="_blank" rel="noopener">Subscribe</a> ·
-            <a href="https://www.toasttab.com/jolie-restaurant-620-n-person-st/giftcards" target="_blank" rel="noopener">Gift Cards</a>
-          </p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; <span class="year">2026</span> Jolie. All rights reserved.</p>
-        <p class="cc-notice">If you use a credit card, we will charge an additional 3% to help offset processing costs. This amount is not more than we pay in fees. We do not surcharge debit cards.</p>
-      </div>
+    <div class="card">
+      <div class="card-date">July 10, 2025</div>
+      <h3>French Bistro Classics Meet North Carolina</h3>
+      <p>At Jolie, we honor traditional French culinary techniques while celebrating the incredible local ingredients that North Carolina has to offer. Our chef sources from nearby farms and producers, ensuring that every plate reflects both authentic French tradition and regional pride. From locally sourced beef and fresh seafood to seasonal vegetables that showcase the best of the Piedmont, we believe that great cuisine is about respecting ingredients and technique equally. This commitment to farm-to-table dining hasn't gone unnoticed—our dedication to excellence has earned us recognition in the MICHELIN Guide, a testament to our team's passion and precision in the kitchen.</p>
+      <a href="#" class="card-link">Read More</a>
     </div>
-  </footer>
 
-    <script src="js/main.js"></script>
+    <div class="card">
+      <div class="card-date">May 1, 2025</div>
+      <h3>Hosting Your Celebration at Jolie</h3>
+      <p>Whether you're planning an intimate rehearsal dinner, a milestone birthday celebration, or a romantic proposal, Jolie offers the perfect backdrop for your special moments. Our private event spaces, including exclusive rooftop buyouts, can be customized to match your vision. From curated tasting menus to wine pairings, our team works closely with you to ensure every detail reflects your style and honors your guests. Imagine celebrating surrounded by candlelight, French ambiance, and world-class cuisine. Let us help you create memories that will last a lifetime at Jolie.</p>
+      <a href="#" class="card-link">Read More</a>
+    </div>
+
+    <div class="card">
+      <div class="card-date">March 15, 2025</div>
+      <h3>The Art of the French Wine List</h3>
+      <p>Our wine program is more than just a collection—it's a carefully curated journey through French viticulture and beyond. Our sommelier team has handpicked selections that complement our menu while introducing guests to both classics and hidden gems. Whether you're a seasoned wine enthusiast or exploring your palate, our team is here to guide you through pairings that elevate your dining experience. Beyond wine, our craft cocktail program draws inspiration from classic French aperitifs, created with precision and served with style. Every sip at Jolie tells a story of tradition, passion, and discovery.</p>
+      <a href="#" class="card-link">Read More</a>
+    </div>
+
+    <div class="card">
+      <div class="card-date">January 20, 2025</div>
+      <h3>A Family Table: The Crawford Hospitality Story</h3>
+      <p>Jolie is part of a larger tapestry of exceptional dining experiences crafted by the Crawford Hospitality family. From the elegant simplicity of Crawford & Son and the rustic elegance of Brodeto, to the classic steakhouse tradition of Crawford Brothers and the intimate ambiance of Bar Sousterre, our collective vision celebrates the art of hospitality in all its forms. Each concept is distinct, yet all are united by our commitment to culinary excellence, impeccable service, and creating spaces where memories are made. We invite you to explore our sister restaurants and discover the unique story each one tells. Together, we're redefining dining in Raleigh, one table at a time.</p>
+      <a href="#" class="card-link">Read More</a>
+    </div>
+  </div>
+</div>
+
+<section class="sister-concepts fade-in">
+  <h2>Visit Our Sister Concepts</h2>
+  <div class="sister-links">
+    <a href="https://brodeto.com/" target="_blank" rel="noopener">Brodeto</a>
+    <a href="https://crawfordandsonrestaurant.com/" target="_blank" rel="noopener">Crawford &amp; Son</a>
+    <a href="https://www.instagram.com/barsousterre/" target="_blank" rel="noopener">Bar Sousterre</a>
+    <a href="https://crawfordbrotherssteakhouse.com/" target="_blank" rel="noopener">Crawford Brothers</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Jolie</div>
+  <p>620 N. Person Street &bull; Raleigh, NC 27604</p>
+  <p><a href="tel:9198037221">(919) 803-7221</a> &bull; Tuesday &ndash; Saturday 5pm&ndash;10pm</p>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/jolierestaurant/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+    <a href="https://www.facebook.com/jolierestaurantraleigh" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+  </div>
+  <p><a href="blog.html" class="footer-link-sm">Stories from Jolie</a></p>
+  <p>
+    <a href="https://crawfordandsonrestaurant.us14.list-manage.com/subscribe/?u=ee5052e648b8659c4336a89c4&id=8d9fd19e46" target="_blank" rel="noopener" class="footer-link-sm">Sign up for updates</a>&nbsp; | &nbsp;<a href="https://www.toasttab.com/jolie-restaurant-620-n-person-st/giftcards" target="_blank" rel="noopener" class="footer-link-sm">Purchase a gift card</a>&nbsp; | &nbsp;<a href="careers.html" class="footer-link-sm">Careers at Jolie</a>
+  </p>
+  <p class="cc-notice">If you use a credit card, we will charge an additional 3% to help offset processing costs. This amount is not more than we pay in fees. We do not surcharge debit cards.</p>
+  <p class="footer-copy">&copy; 2026 Jolie. All rights reserved.</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
 </body>
 </html>

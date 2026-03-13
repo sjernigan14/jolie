@@ -3,31 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore the dinner and beverage menus at Jolie, a MICHELIN Guide Selected French bistro in Raleigh, NC. Classic French dishes from Chef Scott Crawford.">
+  <title>Menu | Jolie - French Bistro | Raleigh, NC</title>
+  <meta name="description" content="View the dinner and beverage menus at Jolie, a MICHELIN Guide Selected French bistro in Raleigh NC. Classic French dishes and modern adaptations from Chef Scott Crawford.">
   <meta name="theme-color" content="#2D2D2D">
-  <title>Menus | Jolie - French Bistro | Raleigh, NC</title>
-
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://restaurantjolie.com/menu.html">
-
-  <!-- Open Graph Tags -->
-  <meta property="og:type" content="website">
+  <meta property="og:title" content="Menu | Jolie - French Bistro | Raleigh, NC">
+  <meta property="og:description" content="View the dinner and beverage menus at Jolie, a MICHELIN Guide Selected French bistro in Raleigh NC. Classic French dishes and modern adaptations from Chef Scott Crawford.">
   <meta property="og:url" content="https://restaurantjolie.com/menu.html">
-  <meta property="og:title" content="Menus | Jolie - French Bistro | Raleigh, NC">
-  <meta property="og:description" content="Explore the dinner and beverage menus at Jolie, a MICHELIN Guide Selected French bistro in Raleigh, NC. Classic French dishes from Chef Scott Crawford.">
-  <meta property="og:image" content="https://restaurantjolie.com/images/og-image.jpg">
-
-  <!-- Twitter Card Tags -->
+  <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://restaurantjolie.com/menu.html">
-  <meta name="twitter:title" content="Menus | Jolie - French Bistro | Raleigh, NC">
-  <meta name="twitter:description" content="Explore the dinner and beverage menus at Jolie, a MICHELIN Guide Selected French bistro in Raleigh, NC. Classic French dishes from Chef Scott Crawford.">
-  <meta name="twitter:image" content="https://restaurantjolie.com/images/og-image.jpg">
-
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/style.css">
-
-  <!-- Google Analytics -->
+  <meta name="twitter:title" content="Menu | Jolie - French Bistro | Raleigh, NC">
+  <meta name="twitter:description" content="View the dinner and beverage menus at Jolie, a MICHELIN Guide Selected French bistro in Raleigh NC. Classic French dishes and modern adaptations from Chef Scott Crawford.">
+  <link rel="canonical" href="https://restaurantjolie.com/menu.html">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LRNSS9TTFS"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -35,7 +23,6 @@
     gtag('js', new Date());
     gtag('config', 'G-LRNSS9TTFS');
   </script>
-
   <!-- Facebook Pixel -->
   <script>
     !function(f,b,e,v,n,t,s)
@@ -43,876 +30,98 @@
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
     if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
     n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
+    t.src=v;s=b.parentElement.insertBefore(t,b);
+    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '521660761939680');
     fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=521660761939680&ev=PageView&noscript=1" /></noscript>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">
-        <svg viewBox="0 0 200 50" class="logo-svg">
-          <text x="100" y="28" text-anchor="middle" font-family="Perpetua, serif" font-size="32" letter-spacing="8" fill="#2D2D2D" font-weight="400">✦ JOLIE ✦</text>
-          <text x="100" y="44" text-anchor="middle" font-family="Perpetua, serif" font-size="10" letter-spacing="3" fill="#D8A74A" font-style="italic">bistro francais</text>
-        </svg>
-      </a>
-      <a href="https://guide.michelin.com/us/en/north-carolina/raleigh_2149711/restaurant/jolie" target="_blank" rel="noopener" class="michelin-badge" title="MICHELIN Guide 2025">
-        <svg viewBox="0 0 100 100" class="michelin-svg" width="44" height="44">
-          <circle cx="50" cy="50" r="48" fill="#C4002B" stroke="#A00020" stroke-width="1"/>
-          <circle cx="50" cy="50" r="43" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
-          <text x="50" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF" font-family="'Helvetica Neue', Arial, sans-serif" letter-spacing="2">MICHELIN</text>
-          <line x1="25" y1="44" x2="75" y2="44" stroke="rgba(255,255,255,0.4)" stroke-width="0.5"/>
-          <text x="50" y="62" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF" font-family="'Helvetica Neue', Arial, sans-serif" letter-spacing="3">2025</text>
-          <text x="50" y="78" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.8)" font-family="'Helvetica Neue', Arial, sans-serif" letter-spacing="1">GUIDE</text>
-        </svg>
-      </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="menu.html">MENU</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="rooftop.html">LE ROOFTOP</a></li>
-        <li><a href="events.html">EVENTS</a></li>
-        <li><a href="press.html">PRESS</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
-        <li><a href="https://www.exploretock.com/restaurantjolie" target="_blank" rel="noopener" class="btn-gold nav-cta">RESERVATIONS</a></li>
-      </ul>
-    </div>
-  </nav>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="menu-hero" id="menu-hero">
-      <div class="menu-hero-content">
-        <h1 class="memimas">menus</h1>
-        <p class="subtitle roadway">classic & modern french cuisine</p>
-      </div>
-    </section>
-
-    <!-- Tab Navigation -->
-    <section class="menu-tabs">
-      <div class="container">
-        <div class="tab-buttons">
-          <button class="tab-button active" data-tab="dinner">Dinner</button>
-          <button class="tab-button" data-tab="beverages">Beverages</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Dinner Menu Tab -->
-    <section class="menu-content" data-tab-content="dinner">
-      <div class="container menu-container">
-
-        <!-- PETIT PLATS -->
-        <div class="menu-section">
-          <h2 class="menu-section-title">PETIT PLATS</h2>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">bread & butter</span>
-              <span class="menu-item-price">8</span>
-            </div>
-            <p class="menu-item-description">boulted baguette, normandy butter</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">fromage & charcuterie</span>
-              <span class="menu-item-price">23</span>
-            </div>
-            <p class="menu-item-description">nicoise olives, burgundy mustard, baguette</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">escargot</span>
-              <span class="menu-item-price">17</span>
-            </div>
-            <p class="menu-item-description">lemon, anchoide, capers, broccolini</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name"><span class="asterisk">*</span>steak tartare</span>
-              <span class="menu-item-price">18</span>
-            </div>
-            <p class="menu-item-description">accoutrements, sour cream chips</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">parisian gnocchi bourguignon</span>
-              <span class="menu-item-price">23</span>
-            </div>
-            <p class="menu-item-description">bacon lardons, baby carrot, button mushroom</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">bangs island mussel toast</span>
-              <span class="menu-item-price">24</span>
-            </div>
-            <p class="menu-item-description">grilled pan au lait, shallot, fine herbs</p>
-          </div>
-        </div>
-
-        <!-- SOUPES ET SALADES -->
-        <div class="menu-section">
-          <h2 class="menu-section-title">SOUPES ET SALADES</h2>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">onion soupe</span>
-              <span class="menu-item-price">19</span>
-            </div>
-            <p class="menu-item-description">beef broth, crouton, fromage cantal</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">gem lettuce salade</span>
-              <span class="menu-item-price">18</span>
-            </div>
-            <p class="menu-item-description">kiwi, walnuts, feta, grapefruit vinaigrette</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">leek & potato vichysoisse</span>
-              <span class="menu-item-price">18</span>
-            </div>
-            <p class="menu-item-description">tarragon oil, leek ash</p>
-          </div>
-        </div>
-
-        <!-- PLATS PRINCIPAUX -->
-        <div class="menu-section">
-          <h2 class="menu-section-title">PLATS PRINCIPAUX</h2>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">roasted celeriac</span>
-              <span class="menu-item-price">26</span>
-            </div>
-            <p class="menu-item-description">caper cream, toasted hazelnuts, celery root puree</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">scallops grenobloise</span>
-              <span class="menu-item-price">50</span>
-            </div>
-            <p class="menu-item-description">turnabega fondant, brioche, brown butter</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">duck breast à l'orange</span>
-              <span class="menu-item-price">48</span>
-            </div>
-            <p class="menu-item-description">sauce bigarade, endive</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name"><span class="asterisk">*</span>hanger steak</span>
-              <span class="menu-item-price">40</span>
-            </div>
-            <p class="menu-item-description">sauce béarnaise, herb frites</p>
-          </div>
-        </div>
-
-        <!-- SUPPLÉMENTS -->
-        <div class="menu-section">
-          <h2 class="menu-section-title">SUPPLÉMENTS</h2>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">truffle frites</span>
-              <span class="menu-item-price">12</span>
-            </div>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">petit salade</span>
-              <span class="menu-item-price">8</span>
-            </div>
-            <p class="menu-item-description">dijon vinaigrette, apple</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">crispy pomme de terre</span>
-              <span class="menu-item-price">12</span>
-            </div>
-            <p class="menu-item-description">vinaigrette vert</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">herb frites</span>
-              <span class="menu-item-price">8</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- LES DÉSSERTS -->
-        <div class="menu-section">
-          <h2 class="menu-section-title">LES DÉSSERTS</h2>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">crème brûlée</span>
-              <span class="menu-item-price">14</span>
-            </div>
-            <p class="menu-item-description">seasonal</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">dark chocolate mousse</span>
-              <span class="menu-item-price">15</span>
-            </div>
-            <p class="menu-item-description">pistachio cremeux, candied pistachios</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">seasonal sorbet</span>
-              <span class="menu-item-price">14 / 8</span>
-            </div>
-            <p class="menu-item-description">add green chartreuse</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Beverages Menu Tab -->
-    <section class="menu-content" data-tab-content="beverages" style="display: none;">
-      <div class="container menu-container">
-
-        <p class="beverage-note">make it a champagne cocktail or kir +$2</p>
-
-        <!-- COCKTAILS -->
-        <div class="menu-section">
-          <h2 class="menu-section-title">COCKTAILS</h2>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">riviera spritz</span>
-              <span class="menu-item-price">18</span>
-            </div>
-            <p class="menu-item-description">gin, italicus, blueberry, thyme, cremant</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">the white mouse sazerac</span>
-              <span class="menu-item-price">18</span>
-            </div>
-            <p class="menu-item-description">rye, cognac, sauternes, yellow chartreuse</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">trial by fire</span>
-              <span class="menu-item-price">18</span>
-            </div>
-            <p class="menu-item-description">blanco tequila, salers, strawberry, jalapeno</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">oaxacan midnight</span>
-              <span class="menu-item-price">18</span>
-            </div>
-            <p class="menu-item-description">mezcal, ancho reyes, red wine, mulling spices</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">little hugo (spirit free)</span>
-              <span class="menu-item-price">12</span>
-            </div>
-            <p class="menu-item-description">verjus, elderflower, lemon, mint</p>
-          </div>
-        </div>
-
-        <!-- BEER -->
-        <div class="menu-section">
-          <h2 class="menu-section-title">BEER</h2>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Non-Alcoholic Pilsner, Burial</span>
-              <span class="menu-item-price">8</span>
-            </div>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">IPA, Rotating</span>
-              <span class="menu-item-price">12</span>
-            </div>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Pilsner, Rotating</span>
-              <span class="menu-item-price">10</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- NON-ALCOHOLIC -->
-        <div class="menu-section">
-          <h2 class="menu-section-title">NON-ALCOHOLIC</h2>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Eric Bordelet Pear Cider</span>
-              <span class="menu-item-price">16</span>
-            </div>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Sprite</span>
-              <span class="menu-item-price">4</span>
-            </div>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Diet Coke</span>
-              <span class="menu-item-price">3</span>
-            </div>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Mexican Coke</span>
-              <span class="menu-item-price">4</span>
-            </div>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Iced Tea</span>
-              <span class="menu-item-price">4</span>
-            </div>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Saratoga Still</span>
-              <span class="menu-item-price">9</span>
-            </div>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Saratoga Sparkling</span>
-              <span class="menu-item-price">9</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- WINE BY THE GLASS: SPARKLING & ROSÉ -->
-        <div class="menu-section">
-          <h2 class="menu-section-title">WINE BY THE GLASS — SPARKLING & ROSÉ</h2>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Crémant de Bourgogne Brut, Domaine Leflaive</span>
-              <span class="menu-item-price">14</span>
-            </div>
-            <p class="menu-item-description">Chardonnay, Pinot Noir, Aligoté | Burgundy, France</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Champagne Brut, Paul Goerg</span>
-              <span class="menu-item-price">18</span>
-            </div>
-            <p class="menu-item-description">Chardonnay, Pinot Noir, Pinot Meunier | Champagne, France</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Rosé de Saignée, Erath</span>
-              <span class="menu-item-price">16</span>
-            </div>
-            <p class="menu-item-description">Pinot Noir | Willamette Valley, OR</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Rosé Provence, Whispering Angel</span>
-              <span class="menu-item-price">14</span>
-            </div>
-            <p class="menu-item-description">Grenache, Cinsault, Syrah | Provence, France</p>
-          </div>
-        </div>
-
-        <!-- WINE BY THE GLASS: WHITE -->
-        <div class="menu-section">
-          <h2 class="menu-section-title">WINE BY THE GLASS — WHITE</h2>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Sancerre, Domaine Vacheron</span>
-              <span class="menu-item-price">17</span>
-            </div>
-            <p class="menu-item-description">Sauvignon Blanc | Loire Valley, France</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Chablis, William Fèvre</span>
-              <span class="menu-item-price">16</span>
-            </div>
-            <p class="menu-item-description">Chardonnay | Burgundy, France</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Bourgogne Blanc, Domaine Leflaive</span>
-              <span class="menu-item-price">15</span>
-            </div>
-            <p class="menu-item-description">Chardonnay | Burgundy, France</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Vermentino, Argiolas</span>
-              <span class="menu-item-price">13</span>
-            </div>
-            <p class="menu-item-description">Vermentino | Sardinia, Italy</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Riesling, Dr. Loosen</span>
-              <span class="menu-item-price">14</span>
-            </div>
-            <p class="menu-item-description">Riesling | Mosel, Germany</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Grüner Veltliner, Hirtzberger</span>
-              <span class="menu-item-price">15</span>
-            </div>
-            <p class="menu-item-description">Grüner Veltliner | Danube, Austria</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Albariño, Martín Códax</span>
-              <span class="menu-item-price">13</span>
-            </div>
-            <p class="menu-item-description">Albariño | Rías Baixas, Spain</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Pinot Gris, Elk Cove</span>
-              <span class="menu-item-price">12</span>
-            </div>
-            <p class="menu-item-description">Pinot Gris | Willamette Valley, OR</p>
-          </div>
-        </div>
-
-        <!-- WINE BY THE GLASS: RED -->
-        <div class="menu-section">
-          <h2 class="menu-section-title">WINE BY THE GLASS — RED</h2>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Burgundy Pinot Noir, Domaine Leflaive</span>
-              <span class="menu-item-price">18</span>
-            </div>
-            <p class="menu-item-description">Pinot Noir | Burgundy, France</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Côtes du Rhône, Domaine du Vieux Télégraphe</span>
-              <span class="menu-item-price">14</span>
-            </div>
-            <p class="menu-item-description">Grenache, Syrah, Mourvèdre | Rhône Valley, France</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Chianti Classico, Fontodi</span>
-              <span class="menu-item-price">16</span>
-            </div>
-            <p class="menu-item-description">Sangiovese | Tuscany, Italy</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Barolo, Batasiolo</span>
-              <span class="menu-item-price">19</span>
-            </div>
-            <p class="menu-item-description">Nebbiolo | Piedmont, Italy</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Tempranillo, Bodegas Muga</span>
-              <span class="menu-item-price">15</span>
-            </div>
-            <p class="menu-item-description">Tempranillo | Rioja, Spain</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Pinot Noir, A to Z</span>
-              <span class="menu-item-price">13</span>
-            </div>
-            <p class="menu-item-description">Pinot Noir | Willamette Valley, OR</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Cabernet Sauvignon, Robert Mondavi</span>
-              <span class="menu-item-price">17</span>
-            </div>
-            <p class="menu-item-description">Cabernet Sauvignon | Napa Valley, CA</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Malbec, Catena</span>
-              <span class="menu-item-price">14</span>
-            </div>
-            <p class="menu-item-description">Malbec | Mendoza, Argentina</p>
-          </div>
-        </div>
-
-        <!-- WINE BY THE BOTTLE: SPARKLING -->
-        <div class="menu-section">
-          <h2 class="menu-section-title">WINE BY THE BOTTLE — SPARKLING</h2>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Champagne Brut, Pol Roger</span>
-              <span class="menu-item-price">85</span>
-            </div>
-            <p class="menu-item-description">Chardonnay, Pinot Noir, Pinot Meunier | Champagne, France</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Champagne Blanc de Blancs, Billecart-Salmon</span>
-              <span class="menu-item-price">95</span>
-            </div>
-            <p class="menu-item-description">Chardonnay | Champagne, France</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Crémant de Loire, Domaine des Baumard</span>
-              <span class="menu-item-price">48</span>
-            </div>
-            <p class="menu-item-description">Chenin Blanc | Loire Valley, France</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Prosecco Superiore, Nino Franco</span>
-              <span class="menu-item-price">52</span>
-            </div>
-            <p class="menu-item-description">Glera | Valdobbiadene, Italy</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Cava, Codorniu</span>
-              <span class="menu-item-price">38</span>
-            </div>
-            <p class="menu-item-description">Macabeo, Xarello, Parellada | Penedès, Spain</p>
-          </div>
-        </div>
-
-        <!-- WINE BY THE BOTTLE: ROSÉ -->
-        <div class="menu-section">
-          <h2 class="menu-section-title">WINE BY THE BOTTLE — ROSÉ</h2>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Rosé Provence, Château de Selle</span>
-              <span class="menu-item-price">58</span>
-            </div>
-            <p class="menu-item-description">Grenache, Cinsault, Syrah | Provence, France</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Rosé de Saignée, Erath</span>
-              <span class="menu-item-price">42</span>
-            </div>
-            <p class="menu-item-description">Pinot Noir | Willamette Valley, OR</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Tavel Rosé, Domaine de l'Aquéria</span>
-              <span class="menu-item-price">48</span>
-            </div>
-            <p class="menu-item-description">Grenache, Cinsault, Mourvèdre | Rhône Valley, France</p>
-          </div>
-        </div>
-
-        <!-- WINE BY THE BOTTLE: WHITE -->
-        <div class="menu-section">
-          <h2 class="menu-section-title">WINE BY THE BOTTLE — WHITE</h2>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Sancerre, Domaine Vacheron</span>
-              <span class="menu-item-price">58</span>
-            </div>
-            <p class="menu-item-description">Sauvignon Blanc | Loire Valley, France</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Chablis Premier Cru, William Fèvre</span>
-              <span class="menu-item-price">52</span>
-            </div>
-            <p class="menu-item-description">Chardonnay | Burgundy, France</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Puligny-Montrachet, Domaine Leflaive</span>
-              <span class="menu-item-price">88</span>
-            </div>
-            <p class="menu-item-description">Chardonnay | Burgundy, France</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Riesling Auslese, Dr. Loosen</span>
-              <span class="menu-item-price">65</span>
-            </div>
-            <p class="menu-item-description">Riesling | Mosel, Germany</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Grüner Veltliner, Hirtzberger</span>
-              <span class="menu-item-price">52</span>
-            </div>
-            <p class="menu-item-description">Grüner Veltliner | Danube, Austria</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Verdicchio dei Castelli di Jesi, Umani Ronchi</span>
-              <span class="menu-item-price">48</span>
-            </div>
-            <p class="menu-item-description">Verdicchio | Marche, Italy</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Albariño, Martín Códax</span>
-              <span class="menu-item-price">45</span>
-            </div>
-            <p class="menu-item-description">Albariño | Rías Baixas, Spain</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Pinot Gris, Elk Cove</span>
-              <span class="menu-item-price">40</span>
-            </div>
-            <p class="menu-item-description">Pinot Gris | Willamette Valley, OR</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Sauvignon Blanc, Cloudy Bay</span>
-              <span class="menu-item-price">48</span>
-            </div>
-            <p class="menu-item-description">Sauvignon Blanc | Marlborough, New Zealand</p>
-          </div>
-        </div>
-
-        <!-- WINE BY THE BOTTLE: RED -->
-        <div class="menu-section">
-          <h2 class="menu-section-title">WINE BY THE BOTTLE — RED</h2>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Burgundy Pinot Noir, Domaine Leflaive</span>
-              <span class="menu-item-price">62</span>
-            </div>
-            <p class="menu-item-description">Pinot Noir | Burgundy, France</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Gevrey-Chambertin, Domaine Claude Dugat</span>
-              <span class="menu-item-price">95</span>
-            </div>
-            <p class="menu-item-description">Pinot Noir | Burgundy, France</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Côtes du Rhône, Domaine du Vieux Télégraphe</span>
-              <span class="menu-item-price">48</span>
-            </div>
-            <p class="menu-item-description">Grenache, Syrah, Mourvèdre | Rhône Valley, France</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Châteauneuf-du-Pape, Domaine du Vieux Télégraphe</span>
-              <span class="menu-item-price">72</span>
-            </div>
-            <p class="menu-item-description">Grenache, Syrah, Mourvèdre | Rhône Valley, France</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Bordeaux, Château Pichon Longueville</span>
-              <span class="menu-item-price">78</span>
-            </div>
-            <p class="menu-item-description">Cabernet Sauvignon, Merlot, Petit Verdot | Bordeaux, France</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Chianti Classico Riserva, Fontodi</span>
-              <span class="menu-item-price">65</span>
-            </div>
-            <p class="menu-item-description">Sangiovese | Tuscany, Italy</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Barolo, Batasiolo</span>
-              <span class="menu-item-price">68</span>
-            </div>
-            <p class="menu-item-description">Nebbiolo | Piedmont, Italy</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Barbaresco, Gaja</span>
-              <span class="menu-item-price">85</span>
-            </div>
-            <p class="menu-item-description">Nebbiolo | Piedmont, Italy</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Tempranillo, Marqués de Riscal</span>
-              <span class="menu-item-price">52</span>
-            </div>
-            <p class="menu-item-description">Tempranillo | Rioja, Spain</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Pinot Noir, A to Z</span>
-              <span class="menu-item-price">42</span>
-            </div>
-            <p class="menu-item-description">Pinot Noir | Willamette Valley, OR</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Cabernet Sauvignon, Robert Mondavi</span>
-              <span class="menu-item-price">58</span>
-            </div>
-            <p class="menu-item-description">Cabernet Sauvignon | Napa Valley, CA</p>
-          </div>
-
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Malbec, Catena</span>
-              <span class="menu-item-price">48</span>
-            </div>
-            <p class="menu-item-description">Malbec | Mendoza, Argentina</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <section class="sister-concepts" id="Elsewhere">
-    <div class="container text-center">
-      <h2 class="roadway">Visit Our Sister Concepts</h2>
-      <div class="sister-links">
-        <a href="https://brodeto.com/" target="_blank" rel="noopener">Brodeto</a>
-        <a href="https://crawfordandsonrestaurant.com/" target="_blank" rel="noopener">Crawford &amp; Son</a>
-        <a href="https://www.instagram.com/barsousterre/" target="_blank" rel="noopener">Bar Sousterre</a>
-        <a href="https://crawfordbrotherssteakhouse.com/" target="_blank" rel="noopener">Crawford Brothers Steakhouse</a>
-      </div>
+<nav>
+  <a href="index.html" class="nav-logo-link">
+    <span class="nav-logo-script">Jolie</span>
+    <span class="nav-logo-sub">bistro fran&ccedil;ais</span>
+  </a>
+  <div class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+  <div class="nav-links">
+    <a href="menu.html" class="active">Menu</a>
+    <a href="about.html">About</a>
+    <a href="rooftop.html">Le Rooftop</a>
+    <a href="events.html">Private Events</a>
+    <a href="press.html">Press</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://www.exploretock.com/restaurantjolie" target="_blank" rel="noopener" class="nav-btn">Reservations</a>
+  </div>
+</nav>
+
+<main>
+
+  <section class="page-hero" style="background-image: url('https://www.dropbox.com/scl/fi/qgrplzh6b1xb91smsq697/Jolie-Bar-with-window-credit-Jessica-Crawford.jpg?rlkey=h80rqv4996c8ojy2xiiis87a5&raw=1');">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-script">Menus</h1>
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <svg viewBox="0 0 60 80" class="footer-monogram">
-            <text x="10" y="25" font-family="Perpetua, serif" font-size="18" fill="#D8A74A">6</text>
-            <text x="10" y="45" font-family="Perpetua, serif" font-size="18" fill="#D8A74A">2</text>
-            <text x="10" y="65" font-family="Perpetua, serif" font-size="18" fill="#D8A74A">0</text>
-            <text x="30" y="55" font-family="'Memimas Bold', cursive" font-size="40" fill="#D8A74A">J</text>
-          </svg>
-        </div>
-        <div class="footer-col">
-          <p>620 N. Person Street<br>Raleigh, NC 27604</p>
-          <p><a href="tel:9198037221">919.803.7221</a></p>
-          <p><a href="https://restaurantjolie.com/careers/">Careers at Jolie</a></p>
-        </div>
-        <div class="footer-col">
-          <div class="social-links">
-            <a href="https://www.instagram.com/jolierestaurant/" target="_blank" rel="noopener" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-            </a>
-            <a href="https://twitter.com/JolieRestaurant" target="_blank" rel="noopener" aria-label="Twitter">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            </a>
-            <a href="https://www.facebook.com/jolierestaurantraleigh" target="_blank" rel="noopener" aria-label="Facebook">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            </a>
-          </div>
-          <p class="footer-links-extra">
-            <a href="blog.html">Stories from Jolie</a> ·
-            <a href="https://crawfordandsonrestaurant.us14.list-manage.com/subscribe/?u=ee5052e648b8659c4336a89c4&id=8d9fd19e46" target="_blank" rel="noopener">Subscribe</a> ·
-            <a href="https://www.toasttab.com/jolie-restaurant-620-n-person-st/giftcards" target="_blank" rel="noopener">Gift Cards</a>
-          </p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; <span class="year">2026</span> Jolie. All rights reserved.</p>
-        <p class="cc-notice">If you use a credit card, we will charge an additional 3% to help offset processing costs. This amount is not more than we pay in fees. We do not surcharge debit cards.</p>
-      </div>
-    </div>
-  </footer>
+  <section class="text-section fade-in">
+    <div class="section-label">Our Philosophy</div>
+    <p>
+      At Jolie, our menu is a carefully curated reflection of Chef Scott Crawford's vision: small, purposeful, and intentional. Every dish earns its place on our table. We believe in technique-driven French cuisine that honors classical traditions while embracing thoughtful, modern adaptations. From our acclaimed steak frites au poivre and delicate escargot to our rich duck cassoulet, silky gnocchi Parisienne, and perfectly roasted chicken, each plate is a testament to precision and passion. Whether you're indulging in our house-cured rabbit rillettes, buttery steak tartare, or concluding with our elegant pear tarte or decadent dark chocolate terrine, you'll experience the best of what French bistro dining has to offer.
+    </p>
+  </section>
 
-  <!-- Scripts -->
-  <script src="js/main.js"></script>
+  <section class="cta-section fade-in">
+    <h2>Dinner Menu</h2>
+    <p>Our menu changes with the seasons. Please visit us on Tock for the most current offerings.</p>
+    <a href="https://www.exploretock.com/restaurantjolie" target="_blank" rel="noopener" class="cta-btn">View Menu on Tock</a>
+  </section>
+
+  <section class="text-section fade-in">
+    <div class="section-label">Beverages</div>
+    <p>
+      Our thoughtfully curated wine list showcases selections from France and beyond, chosen to complement our menu's refined flavors. Our bartenders craft seasonal and classic cocktails using premium spirits and fresh ingredients, each drink designed to enhance your Jolie experience.
+    </p>
+    <a href="https://www.exploretock.com/restaurantjolie" target="_blank" rel="noopener" class="cta-btn">Explore Beverages on Tock</a>
+  </section>
+
+</main>
+
+<section class="sister-concepts fade-in">
+  <h2>Visit Our Sister Concepts</h2>
+  <div class="sister-links">
+    <a href="https://brodeto.com/" target="_blank" rel="noopener">Brodeto</a>
+    <a href="https://crawfordandsonrestaurant.com/" target="_blank" rel="noopener">Crawford &amp; Son</a>
+    <a href="https://www.instagram.com/barsousterre/" target="_blank" rel="noopener">Bar Sousterre</a>
+    <a href="https://crawfordbrotherssteakhouse.com/" target="_blank" rel="noopener">Crawford Brothers</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Jolie</div>
+  <p>620 N. Person Street &bull; Raleigh, NC 27604</p>
+  <p><a href="tel:9198037221">(919) 803-7221</a> &bull; Tuesday &ndash; Saturday 5pm&ndash;10pm</p>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/jolierestaurant/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+    <a href="https://www.facebook.com/jolierestaurantraleigh" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+  </div>
+  <p><a href="blog.html" class="footer-link-sm">Stories from Jolie</a></p>
+  <p>
+    <a href="https://crawfordandsonrestaurant.us14.list-manage.com/subscribe/?u=ee5052e648b8659c4336a89c4&id=8d9fd19e46" target="_blank" rel="noopener" class="footer-link-sm">Sign up for updates</a>&nbsp; | &nbsp;<a href="https://www.toasttab.com/jolie-restaurant-620-n-person-st/giftcards" target="_blank" rel="noopener" class="footer-link-sm">Purchase a gift card</a>&nbsp; | &nbsp;<a href="careers.html" class="footer-link-sm">Careers at Jolie</a>
+  </p>
+  <p class="cc-notice">If you use a credit card, we will charge an additional 3% to help offset processing costs. This amount is not more than we pay in fees. We do not surcharge debit cards.</p>
+  <p class="footer-copy">&copy; 2026 Jolie. All rights reserved.</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
 </body>
 </html>
