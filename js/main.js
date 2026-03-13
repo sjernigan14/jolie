@@ -1,253 +1,124 @@
 /**
- * Jolie Restaurant - Main JavaScript
- * Handles all interactive behavior for the French bistro website
+ * Jolie French Bistro — main.js
+ * Handles fade-in animations, mobile nav, smooth scroll, menu tabs
  */
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Initialize all features
+  initFadeIn();
   initMobileNav();
-  initScrollEffects();
   initSmoothScroll();
   updateCopyrightYear();
   setActiveNavLink();
   initMenuTabs();
 });
 
-/**
- * FEATURE 1: Mobile Navigation Toggle
- * Hamburger menu with smooth animation, outside click detection, and body scroll lock
- */
+/* ===== Fade-in on Scroll ===== */
+function initFadeIn() {
+  const fadeEls = document.querySelectorAll('.fade-in');
+  if (!fadeEls.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  fadeEls.forEach(el => observer.observe(el));
+}
+
+/* ===== Mobile Navigation ===== */
 function initMobileNav() {
-  const toggle = document.getElementById('navToggle');
-  const navMenu = document.getElementById('navLinks');
+  const toggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  if (!toggle || !navLinks) return;
 
-  if (!toggle || !navMenu) return;
-
-  // Toggle menu open/close
-  toggle.addEventListener('click', function (e) {
+  toggle.addEventListener('click', (e) => {
     e.stopPropagation();
-    toggleMobileMenu();
+    navLinks.classList.toggle('open');
+    toggle.classList.toggle('active');
+    document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
   });
 
-  // Close menu when a nav link is clicked
-  navMenu.querySelectorAll('a').forEach(link => {
+  navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', closeMobileMenu);
   });
 
-  // Close menu when clicking outside
-  document.addEventListener('click', function (e) {
-    if (!e.target.closest('nav') && !e.target.closest('#navToggle')) {
-      closeMobileMenu();
-    }
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('nav')) closeMobileMenu();
   });
-
-  // Close menu on escape key
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-      closeMobileMenu();
-    }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMobileMenu();
   });
-}
-
-function toggleMobileMenu() {
-  const toggle = document.getElementById('navToggle');
-  const navMenu = document.getElementById('navLinks');
-
-  if (!toggle || !navMenu) return;
-  toggle.classList.toggle('active');
-  navMenu.classList.toggle('active');
-
-  if (toggle.classList.contains('active')) {
-    document.body.style.overflow = 'hidden';
-  } else {
-    document.body.style.overflow = '';
-  }
 }
 
 function closeMobileMenu() {
-  const toggle = document.getElementById('navToggle');
-  const navMenu = document.getElementById('navLinks');
-
-  if (!toggle || !navMenu) return;
+  const toggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  if (!toggle || !navLinks) return;
   toggle.classList.remove('active');
-  navMenu.classList.remove('active');
+  navLinks.classList.remove('open');
   document.body.style.overflow = '';
 }
 
-/**
- * FEATURE 2: Scroll Effects
- * Nav background solid on scroll, fade-in animation for elements, active link highlighting
- */
-function initScrollEffects() {
-  const nav = document.querySelector('nav');
-  const hero = document.querySelector('.hero');
-  let heroHeight = hero ? hero.offsetHeight : 500;
-
-  // Handle nav background on scroll
-  window.addEventListener('scroll', function () {
-    if (window.scrollY > heroHeight) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
-
-    // Update active nav link on scroll
-    updateActiveNavLink();
-  });
-
-  // Initialize fade-in animations with Intersection Observer
-  initFadeInObserver();
-}
-
-function initFadeInObserver() {
-  const fadeElements = document.querySelectorAll('.fade-in-up');
-
-  if (!fadeElements.length) return;
-
-  const observer = new IntersectionObserver(
-    function (entries) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.1,
-      rootMargin: '0px 0px -100px 0px'
-    }
-  );
-
-  fadeElements.forEach(element => {
-    observer.observe(element);
-  });
-}
-
-/**
- * Set initial active nav link based on current page
- */
-function setActiveNavLink() {
-  updateActiveNavLink();
-}
-
-/**
- * Update active nav link based on current page
- */
-function updateActiveNavLink() {
-  const currentPage = getCurrentPageName();
-  const navLinks = document.querySelectorAll('nav a');
-
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-
-    const href = link.getAttribute('href');
-    if (href && isLinkForCurrentPage(href, currentPage)) {
-      link.classList.add('active');
-    }
-  });
-}
-
-/**
- * Get the current page filename without extension
- */
-function getCurrentPageName() {
-  const pathname = window.location.pathname;
-  const filename = pathname.split('/').pop();
-  return filename.replace(/\.html?$/, '') || 'index';
-}
-
-/**
- * Check if a link href matches the current page
- */
-function isLinkForCurrentPage(href, currentPage) {
-  const linkPage = href.replace(/\.html?$/, '').replace(/^\.\//, '') || 'index';
-  return linkPage === currentPage || (currentPage === 'index' && (href === '.' || href === './' || href === './index.html'));
-}
-
-/**
- * FEATURE 3: Smooth Scroll
- * Smooth scrolling for anchor links
- */
+/* ===== Smooth Scroll for Anchor Links ===== */
 function initSmoothScroll() {
-  document.addEventListener('click', function (e) {
+  document.addEventListener('click', (e) => {
     const link = e.target.closest('a[href^="#"]');
     if (!link) return;
-
-    const targetId = link.getAttribute('href');
-    if (targetId === '#') return;
-
-    const targetElement = document.querySelector(targetId);
-    if (!targetElement) return;
-
+    const id = link.getAttribute('href');
+    if (id === '#') return;
+    const target = document.querySelector(id);
+    if (!target) return;
     e.preventDefault();
-
-    const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-    const navHeight = document.querySelector('nav')?.offsetHeight || 0;
-
-    window.scrollTo({
-      top: targetPosition - navHeight,
-      behavior: 'smooth'
-    });
-
-    // Close mobile menu if open
+    const navH = document.querySelector('nav')?.offsetHeight || 0;
+    window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - navH, behavior: 'smooth' });
     closeMobileMenu();
   });
 }
 
-/**
- * FEATURE 4: Current Year in Footer
- * Auto-update copyright year
- */
+/* ===== Copyright Year ===== */
 function updateCopyrightYear() {
-  const yearElements = document.querySelectorAll('.year, [data-year]');
-  const currentYear = new Date().getFullYear();
-
-  yearElements.forEach(element => {
-    if (element.classList.contains('year')) {
-      element.textContent = currentYear;
-    } else if (element.hasAttribute('data-year')) {
-      element.textContent = currentYear;
-    }
+  document.querySelectorAll('.year').forEach(el => {
+    el.textContent = new Date().getFullYear();
   });
 }
 
-/**
- * FEATURE 5: Menu Tab Switching
- * Toggle between Dinner and Beverages tabs on menu page
- */
+/* ===== Active Nav Link ===== */
+function setActiveNavLink() {
+  const page = window.location.pathname.split('/').pop().replace(/\.html?$/, '') || 'index';
+  document.querySelectorAll('nav a').forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href) return;
+    const linkPage = href.replace(/\.html?$/, '').replace(/^\.\//, '') || 'index';
+    if (linkPage === page) link.classList.add('active');
+  });
+}
+
+/* ===== Menu Tab Switching ===== */
 function initMenuTabs() {
-  const tabButtons = document.querySelectorAll('[data-tab]');
-  const tabContents = document.querySelectorAll('[data-tab-content]');
+  const tabs = document.querySelectorAll('[data-tab]');
+  const panels = document.querySelectorAll('[data-tab-content]');
+  if (!tabs.length || !panels.length) return;
 
-  if (!tabButtons.length || !tabContents.length) return;
-
-  tabButtons.forEach(button => {
-    button.addEventListener('click', function (e) {
+  tabs.forEach(btn => {
+    btn.addEventListener('click', (e) => {
       e.preventDefault();
-
-      const tabName = this.getAttribute('data-tab');
-
-      // Deactivate all tabs and contents
-      tabButtons.forEach(btn => btn.classList.remove('active'));
-      tabContents.forEach(content => content.classList.remove('active'));
-
-      // Activate selected tab and content
-      this.classList.add('active');
-      const activeContent = document.querySelector(`[data-tab-content="${tabName}"]`);
-      if (activeContent) {
-        activeContent.classList.add('active');
-      }
+      const name = btn.getAttribute('data-tab');
+      tabs.forEach(t => t.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      const panel = document.querySelector(`[data-tab-content="${name}"]`);
+      if (panel) panel.classList.add('active');
     });
   });
 
-  // Set first tab as active by default
-  if (tabButtons.length > 0) {
-    tabButtons[0].classList.add('active');
-    const firstTabName = tabButtons[0].getAttribute('data-tab');
-    const firstContent = document.querySelector(`[data-tab-content="${firstTabName}"]`);
-    if (firstContent) {
-      firstContent.classList.add('active');
-    }
+  // Default: activate first tab
+  if (tabs[0]) {
+    tabs[0].classList.add('active');
+    const first = document.querySelector(`[data-tab-content="${tabs[0].getAttribute('data-tab')}"]`);
+    if (first) first.classList.add('active');
   }
 }
