@@ -156,7 +156,7 @@ nav a.active {
   margin: 5px 0;
   transition: 0.3s;
 }
-.nav-links { display: flex; align-items: center; gap: 32px; }
+.nav-links { display: flex; align-items: center; justify-content: center; gap: 40px; flex: 1; }
 
 /* ===== HERO ===== */
 .hero {
