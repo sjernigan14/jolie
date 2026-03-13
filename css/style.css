@@ -278,7 +278,8 @@ nav.navbar {
   box-shadow: var(--shadow-light);
 }
 
-.navbar-container {
+/* HTML uses .nav-container, .nav-logo, .nav-links, .nav-toggle */
+.nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -289,29 +290,32 @@ nav.navbar {
   height: 70px;
 }
 
-.navbar-logo {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-black);
-  letter-spacing: 0.05em;
-  flex-shrink: 0;
-}
-
-.navbar-logo span {
-  color: var(--color-gold);
-}
-
-.navbar-menu {
+.nav-logo {
   display: flex;
   align-items: center;
-  gap: 3rem;
-  flex: 1;
-  justify-content: center;
-  margin: 0;
+  flex-shrink: 0;
+  text-decoration: none;
 }
 
-.navbar-menu a {
+.nav-logo .logo-svg {
+  width: 180px;
+  height: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
   font-family: var(--font-display);
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -321,19 +325,18 @@ nav.navbar {
   border-bottom: 2px solid transparent;
   transition: var(--transition-base);
   font-weight: 500;
+  text-decoration: none;
 }
 
-.navbar-menu a:hover,
-.navbar-menu a.active {
+.nav-links a:hover,
+.nav-links a.active {
   color: var(--color-gold);
   border-bottom-color: var(--color-gold);
 }
 
-.navbar-right {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  flex-shrink: 0;
+.nav-links .nav-cta {
+  border-bottom: none;
+  padding: 10px 24px;
 }
 
 .michelin-badge {
@@ -351,53 +354,57 @@ nav.navbar {
   filter: drop-shadow(0 1px 3px rgba(0,0,0,0.12));
 }
 
-.navbar-toggle {
+.nav-toggle {
   display: none;
   flex-direction: column;
   cursor: pointer;
   gap: 6px;
+  background: none;
+  border: none;
+  padding: 8px;
 }
 
-.navbar-toggle span {
+.nav-toggle span {
   width: 25px;
   height: 2px;
   background-color: var(--color-black);
   transition: var(--transition-base);
+  display: block;
 }
 
-.navbar-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(10px, 10px);
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
 }
 
-.navbar-toggle.active span:nth-child(2) {
+.nav-toggle.active span:nth-child(2) {
   opacity: 0;
 }
 
-.navbar-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -7px);
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 @media (max-width: 1024px) {
-  .navbar-menu {
-    gap: 2rem;
+  .nav-links {
+    gap: 1.5rem;
   }
 
-  .navbar-menu a {
+  .nav-links a {
     font-size: 0.7rem;
   }
 }
 
 @media (max-width: 768px) {
-  .navbar-container {
+  .nav-container {
     height: 60px;
     padding: 0 var(--spacing-md);
   }
 
-  .navbar-logo {
-    font-size: 1.25rem;
+  .nav-logo .logo-svg {
+    width: 140px;
   }
 
-  .navbar-menu {
+  .nav-links {
     position: absolute;
     top: 60px;
     left: 0;
@@ -411,27 +418,22 @@ nav.navbar {
     transition: max-height 0.3s ease-in-out;
   }
 
-  .navbar-menu.active {
-    max-height: 400px;
+  .nav-links.active {
+    max-height: 500px;
   }
 
-  .navbar-menu a {
+  .nav-links a {
     padding: var(--spacing-md);
+    display: block;
     border-bottom: 1px solid #f0f0f0;
-    border-bottom-color: transparent;
   }
 
-  .navbar-menu a:hover,
-  .navbar-menu a.active {
+  .nav-links a:hover,
+  .nav-links a.active {
     background-color: var(--color-offwhite);
-    border-bottom-color: var(--color-gold);
   }
 
-  .navbar-right {
-    gap: 1rem;
-  }
-
-  .navbar-toggle {
+  .nav-toggle {
     display: flex;
   }
 
@@ -1018,6 +1020,143 @@ textarea {
   width: 100%;
 }
 
+/* Hero script logo */
+.hero-logo-svg {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 0 auto var(--spacing-lg);
+  display: block;
+}
+
+.hero-script {
+  font-family: var(--font-script);
+  font-size: 5rem;
+  color: var(--color-gold);
+  text-align: center;
+  line-height: 1.1;
+  margin-bottom: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+  .hero-script {
+    font-size: 3.5rem;
+  }
+}
+
+/* Intro section */
+.intro {
+  padding: 60px var(--spacing-lg);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intro-label {
+  font-family: var(--font-script);
+  font-size: 1.8rem;
+  color: var(--color-gold);
+  margin-bottom: var(--spacing-md);
+}
+
+.intro-text {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* Quick links grid */
+.quick-links {
+  padding: 40px var(--spacing-lg) 60px;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.quick-links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card-label {
+  font-family: var(--font-script);
+  font-size: 1.8rem;
+  color: var(--color-gold);
+  margin-bottom: var(--spacing-md);
+}
+
+.card-link {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-gold);
+}
+
+.card-arrow {
+  font-size: 1.5rem;
+  color: var(--color-gold);
+}
+
+.card-info p {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.8;
+  color: var(--color-text);
+}
+
+.card-address {
+  margin-top: var(--spacing-sm);
+  font-size: 0.8rem !important;
+  color: #777 !important;
+  text-transform: none !important;
+}
+
+@media (max-width: 768px) {
+  .quick-links-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Accolades bar */
+.accolades {
+  padding: 30px var(--spacing-lg);
+  background-color: var(--color-offwhite);
+  text-align: center;
+}
+
+.accolades-text {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: #888;
+  line-height: 1.8;
+}
+
+/* CTA Row */
+.cta-row {
+  padding: 50px var(--spacing-lg);
+  text-align: center;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn-large {
+  padding: 16px 48px;
+  font-size: 0.95rem;
+}
+
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -1036,7 +1175,7 @@ textarea {
 
 .decoration::before,
 .decoration::after {
-  content: 'â¦';
+  content: '✦';
   display: block;
   font-size: 1.5rem;
   color: var(--color-gold);
