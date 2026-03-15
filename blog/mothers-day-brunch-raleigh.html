@@ -30,8 +30,8 @@
       "@type": "Organization",
       "name": "Jolie"
     },
-    "datePublished": "2026-03-15",
-    "dateModified": "2026-03-15"
+    "datePublished": "2025-04-19",
+    "dateModified": "2025-04-19"
   }
   </script>
 
@@ -398,95 +398,62 @@
       text-decoration: none;
     }
 
-    /* Footer */
+        /* Footer */
     footer {
-      background-color: #1a1a1a;
-      color: #e8e0d4;
-      padding: 3rem 2rem;
-      margin-top: 4rem;
-      font-size: 0.95rem;
-      line-height: 1.7;
-    }
-
-    .footer-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-
-    .footer-section h3 {
-      font-size: 1rem;
-      margin-bottom: 1rem;
+      background: #2c2c2c;
       color: #fff;
+      padding: 3rem 2rem;
+      text-align: center;
     }
-
     .footer-logo {
+      font-family: 'Memimas', cursive;
+      font-size: 36px;
       color: #D8A74A;
       margin-bottom: 16px;
-      text-align: center;
     }
-    .footer-monogram-j {
-      font-family: 'Perpetua Titling MT', 'Perpetua', Georgia, serif;
-      font-size: 48px;
-      letter-spacing: 2px;
-      display: block;
-      line-height: 1;
-    }
-    .footer-monogram-620 {
-      font-family: 'Perpetua Titling MT', 'Perpetua', Georgia, serif;
-      font-size: 14px;
-      letter-spacing: 6px;
-      display: block;
-      margin-top: 4px;
-    }
-
-    .footer-hours {
-      font-size: 0.9rem;
-    }
-
-    .footer-hours p {
-      margin-bottom: 0.5rem;
-    }
-
-    footer a {
-      color: #8b6f47;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    .social-icons {
+    .footer-social {
       display: flex;
-      gap: 1rem;
-      margin-top: 1rem;
+      justify-content: center;
+      gap: 16px;
+      margin: 16px 0;
     }
-
-    .social-icons a {
+    .footer-social a {
       display: inline-flex;
-      width: 40px;
-      height: 40px;
       align-items: center;
       justify-content: center;
-      background-color: #333;
-      border-radius: 50%;
-      font-size: 1.2rem;
+      color: #d4af99;
     }
-
-    .social-icons a:hover {
-      background-color: #444;
+    .footer-social svg {
+      width: 24px;
+      height: 24px;
+      fill: #d4af99;
+      transition: fill 0.3s;
+    }
+    .footer-social a:hover svg {
+      fill: #e8c7b0;
+    }
+    footer a {
+      color: #d4af99;
       text-decoration: none;
     }
-
-    .footer-copyright {
-      margin-top: 2rem;
-      padding-top: 2rem;
-      border-top: 1px solid #333;
-      text-align: center;
+    footer a:hover {
+      color: #e8c7b0;
+    }
+    .footer-link-sm {
       font-size: 0.9rem;
+    }
+    .cc-notice {
+      font-size: 0.8rem;
       color: #999;
+      margin-top: 1.5rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .footer-copy {
+      font-size: 0.85rem;
+      color: #999;
+      margin-top: 1rem;
     }
 
     /* Responsive */
@@ -501,10 +468,6 @@
 
       main {
         padding: 1rem;
-      }
-
-      .footer-container {
-        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -548,7 +511,6 @@
       <a href="../events.html">events</a>
       <a href="../press.html">press</a>
       <a href="../contact.html">contact</a>
-      <a href="../blog.html">stories</a>
       <a href="https://www.exploretock.com/restaurantjolie" target="_blank" rel="noopener" class="nav-btn">reservations</a>
     </div>
     <a href="https://guide.michelin.com/us/en/north-carolina/raleigh_2149711/restaurant/jolie" target="_blank" rel="noopener" class="nav-michelin" aria-label="MICHELIN Guide 2025">
@@ -561,12 +523,11 @@
     <article>
       <header class="article-header">
         <div class="breadcrumb">
-          <a href="https://restaurantjolie.com/">Jolie</a> &nbsp;/&nbsp;
-          <a href="../blog.html">Stories</a> &nbsp;/&nbsp;
+          <a href="https://restaurantjolie.com/">Jolie</a> &nbsp;/&nbsp; &nbsp;/&nbsp;
           <span>Mother's Day at Jolie: The Brunch She Actually Wants</span>
         </div>
         <h1>Mother's Day at Jolie: The Brunch She Actually Wants</h1>
-        <div class="article-date">March 15, 2026</div>
+        <div class="article-date">April 19, 2025</div>
       </header>
 
       <div class="article-body">
@@ -613,35 +574,20 @@
   </main>
 
   <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-section">
-        <div class="footer-logo"><span class="footer-monogram-j">J</span><span class="footer-monogram-620">620</span></div>
-        <p>620 N. Person Street<br>Raleigh, NC 27604<br><a href="tel:+19198037221">(919) 803-7221</a></p>
-      </div>
-      <div class="footer-section">
-        <h3>Hours</h3>
-        <div class="footer-hours">
-          <p><strong>Tuesday &ndash; Thursday</strong><br>5:00 PM &ndash; 10:00 PM</p>
-          <p><strong>Friday &ndash; Saturday</strong><br>5:00 PM &ndash; 11:00 PM</p>
-          <p><strong>Sunday &ndash; Monday</strong><br>Closed</p>
-        </div>
-      </div>
-      <div class="footer-section">
-        <h3>Connect</h3>
-        <div class="social-icons">
-          <a href="https://www.instagram.com/restaurantjolie/" target="_blank" rel="noopener" title="Instagram">f</a>
-          <a href="https://www.facebook.com/restaurantjolie/" target="_blank" rel="noopener" title="Facebook">in</a>
-        </div>
-      </div>
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <p><a href="../menu.html">Menu</a><br><a href="../rooftop.html">Le Rooftop</a><br><a href="../events.html">Private Events</a><br><a href="https://www.exploretock.com/restaurantjolie" target="_blank" rel="noopener">Reservations</a><br><a href="../contact.html">Contact</a></p>
-      </div>
+    <footer>
+    <div class="footer-logo">Jolie</div>
+    <p>620 N. Person Street &bull; Raleigh, NC 27604</p>
+    <p><a href="tel:9198037221">(919) 803-7221</a> &bull; Tuesday &ndash; Saturday 5pm&ndash;10pm</p>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/jolierestaurant/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+      <a href="https://www.facebook.com/jolierestaurantraleigh" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
     </div>
-    <div class="footer-copyright">
-      <p>&copy; 2026 Jolie French Bistro. All rights reserved.</p>
-    </div>
+    <p><a href="../blog.html" class="footer-link-sm">Stories from Jolie</a></p>
+    <p>
+      <a href="https://crawfordandsonrestaurant.us14.list-manage.com/subscribe/?u=ee5052e648b8659c4336a89c4&amp;id=8d9fd19e46" target="_blank" rel="noopener" class="footer-link-sm">Sign up for updates</a>&nbsp; | &nbsp;<a href="https://www.toasttab.com/jolie-restaurant-620-n-person-st/giftcards" target="_blank" rel="noopener" class="footer-link-sm">Purchase a gift card</a>&nbsp; | &nbsp;<a href="../careers.html" class="footer-link-sm">Careers at Jolie</a>
+    </p>
+    <p class="cc-notice">If you use a credit card, we will charge an additional 3% to help offset processing costs. This amount is not more than we pay in fees. We do not surcharge debit cards.</p>
+    <p class="footer-copy">&copy; 2026 Jolie. All rights reserved.</p>
   </footer>
 </body>
 </html>
