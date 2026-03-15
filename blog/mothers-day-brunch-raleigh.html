@@ -113,74 +113,168 @@
       background-color: #faf9f6;
     }
 
-    a {
-      color: #8b6f47;
+    /* Generic link style (non-nav) */
+    article a, .more-from-jolie a, .back-link a, .breadcrumb a {
+      color: #D8A74A;
       text-decoration: none;
     }
 
-    a:hover {
+    article a:hover, .more-from-jolie a:hover, .back-link a:hover, .breadcrumb a:hover {
       text-decoration: underline;
     }
 
-    /* Navigation */
+    /* Navigation - matches homepage exactly */
     nav {
-      background-color: #fff;
-      padding: 1.5rem 2rem;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      justify-content: space-between;
+      padding: 0 40px;
+      min-height: 120px;
+      border-bottom: 1px solid #e8e0d4;
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(12px);
+      z-index: 50;
     }
 
-    .nav-logo {
-      font-family: 'Roadway', sans-serif;
-      font-size: 1.8rem;
-      color: #2c2c2c;
+    .nav-logo-link {
+      text-decoration: none;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    .nav-logo-img {
+      height: 100px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-michelin {
+      flex-shrink: 0;
+      margin-left: auto;
+      transition: transform 0.3s;
+    }
+
+    .nav-michelin:hover {
+      transform: scale(1.08);
+    }
+
+    .nav-michelin svg {
+      display: block;
+    }
+
+    nav a {
+      color: #D8A74A;
+      text-decoration: none;
+      font-family: 'Roadway', Futura, 'Trebuchet MS', Arial, sans-serif;
+      font-size: 24px;
+      letter-spacing: 0.5px;
+      text-transform: lowercase;
       font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #2D2D2D;
+    }
+
+    .nav-btn {
+      border: 1px solid #D8A74A;
+      padding: 14px 28px;
+      font-size: 18px;
+      letter-spacing: 2.2px;
+      text-transform: lowercase;
+      transition: background 0.3s, color 0.3s;
+      color: #D8A74A !important;
+    }
+
+    .nav-btn:hover {
+      background: #D8A74A;
+      color: #FFFFFF !important;
+    }
+
+    .nav-toggle {
+      display: none;
+      cursor: pointer;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #2D2D2D;
+      margin: 5px 0;
+      transition: 0.3s;
     }
 
     .nav-links {
       display: flex;
-      gap: 2rem;
-      list-style: none;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex: 1;
     }
 
-    .nav-links a {
-      color: #2c2c2c;
-      font-size: 0.95rem;
-      font-weight: 500;
+    @media (max-width: 768px) {
+      nav {
+        flex-wrap: wrap;
+        gap: 0;
+        padding: 12px 20px;
+        min-height: auto;
+      }
+      .nav-logo-img {
+        height: 60px;
+      }
+      .nav-toggle {
+        display: block;
+      }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        padding: 16px 0;
+        border-top: 1px solid #e8e0d4;
+        margin-top: 12px;
+      }
+      .nav-links.open {
+        display: flex;
+      }
+      .nav-links a {
+        padding: 12px 0;
+        font-size: 18px;
+        width: 100%;
+        text-align: center;
+      }
+      .nav-btn {
+        margin-top: 8px;
+        padding: 12px 24px;
+      }
+      .nav-michelin svg {
+        width: 50px;
+        height: 50px;
+      }
     }
 
-    .nav-links a:hover {
-      color: #8b6f47;
-    }
 
-    .nav-reservations {
-      background-color: #2c2c2c;
-      color: #fff;
-      padding: 0.75rem 1.5rem;
-      border-radius: 4px;
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
+    
 
-    .nav-reservations:hover {
-      background-color: #1a1a1a;
-      text-decoration: none;
-    }
+    
 
-    .michelin-badge {
-      margin-left: 1rem;
-      width: 60px;
-    }
+    
 
-    .mobile-toggle {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
     /* Main Container */
     main {
@@ -384,13 +478,9 @@
 
     /* Responsive */
     @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
+      
 
-      .mobile-toggle {
-        display: block;
-      }
+      
 
       .article-header h1 {
         font-size: 1.8rem;
@@ -432,24 +522,25 @@
 <body>
   <!-- Navigation -->
   <nav>
-    <div class="nav-logo">jolie</div>
-    <ul class="nav-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../menu.html">Menu</a></li>
-      <li><a href="../rooftop.html">Le Rooftop</a></li>
-      <li><a href="../events.html">Events</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../contact.html">Contact</a></li>
-      <li><a href="../blog.html">Stories</a></li>
-    </ul>
-    <a href="https://www.exploretock.com/restaurantjolie" class="nav-reservations">Reserve</a>
-    <div class="michelin-badge">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="48" fill="#d4af37" stroke="#2c2c2c" stroke-width="2"/>
-        <text x="50" y="55" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c2c2c">&#9733;</text>
-      </svg>
+    <a href="../index.html" class="nav-logo-link">
+      <img src="https://restaurantjolie.com/backend/wp-content/themes/jolie/img/logo.gif" alt="Jolie" class="nav-logo-img">
+    </a>
+    <div class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
     </div>
-    <button class="mobile-toggle">&#9776;</button>
+    <div class="nav-links">
+      <a href="../menu.html">menu</a>
+      <a href="../about.html">about</a>
+      <a href="../rooftop.html">le rooftop</a>
+      <a href="../events.html">events</a>
+      <a href="../press.html">press</a>
+      <a href="../contact.html">contact</a>
+      <a href="../blog.html">stories</a>
+      <a href="https://www.exploretock.com/restaurantjolie" target="_blank" rel="noopener" class="nav-btn">reservations</a>
+    </div>
+    <a href="https://guide.michelin.com/us/en/north-carolina/raleigh_2149711/restaurant/jolie" target="_blank" rel="noopener" class="nav-michelin" aria-label="MICHELIN Guide 2025">
+      <svg viewBox="0 0 100 100" width="90" height="90"><circle cx="50" cy="50" r="48" fill="#C4002B"/><text x="50" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="'Helvetica Neue',Arial,sans-serif" letter-spacing="2">MICHELIN</text><line x1="25" y1="44" x2="75" y2="44" stroke="rgba(255,255,255,0.4)" stroke-width="0.5"/><text x="50" y="62" text-anchor="middle" font-size="20" font-weight="700" fill="#fff" font-family="'Helvetica Neue',Arial,sans-serif" letter-spacing="3">2025</text><text x="50" y="78" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.8)" font-family="'Helvetica Neue',Arial,sans-serif" letter-spacing="1">GUIDE</text></svg>
+    </a>
   </nav>
 
   <!-- Main Content -->
@@ -498,7 +589,7 @@
         <p><a href="../menu.html">See our menu</a> &nbsp;&middot;&nbsp; <a href="../rooftop.html">Le Rooftop</a> &nbsp;&middot;&nbsp; <a href="../events.html">Private events</a> &nbsp;&middot;&nbsp; <a href="https://www.exploretock.com/restaurantjolie" target="_blank" rel="noopener">Make a reservation</a></p>
         <p>After dinner, ask about <a href="https://www.barsousterre.com/" target="_blank" rel="noopener">Sous Terre</a> &mdash; Chef Crawford's private underground cocktail club, located right beneath Jolie. Jolie diners get complimentary access.</p>
         <p><strong>Stay in the loop:</strong> <a href="https://crawfordandsonrestaurant.us14.list-manage.com/subscribe/?u=ee5052e648b8659c4336a89c4&id=8d9fd19e46" target="_blank" rel="noopener">Sign up for email updates</a> to hear about seasonal menus, wine dinners, Valentine's Day, New Year's Eve, and other special events before they're announced publicly.</p>
-        <p><strong>From Crawford Hospitality:</strong> Jolie is part of Chef Scott Crawford's restaurant family &mdash; <a href="https://sjernigan14.github.io/crawford-brothers/" target="_blank" rel="noopener">Crawford Brothers Steakhouse</a> in Cary, <a href="https://brodeto.com" target="_blank" rel="noopener">Brodeto</a> (Adriatic seafood), Crawford &amp; Son on Person Street, and <a href="https://www.barsousterre.com/" target="_blank" rel="noopener">Bar Sous Terre</a>.</p>
+        <p><strong>From Crawford Hospitality:</strong> Jolie is part of Chef Scott Crawford's restaurant family &mdash; <a href="https://www.crawfordbrotherssteakhouse.com/" target="_blank" rel="noopener">Crawford Brothers Steakhouse</a> in Cary, <a href="https://brodeto.com" target="_blank" rel="noopener">Brodeto</a> (Adriatic seafood), Crawford &amp; Son on Person Street, and <a href="https://www.barsousterre.com/" target="_blank" rel="noopener">Bar Sous Terre</a>.</p>
         <p><strong>Parking:</strong> Street parking on Person and Pace Streets, neighborhood streets, or the <a href="https://downtownraleigh.org/go/800-n-person-st-parking-lot" target="_blank" rel="noopener">800 N. Person St lot</a> (4-minute walk).</p>
       </div>
 
